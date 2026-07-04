@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXMART — Premium Shopping Experience</title>
+  <meta name="description"
+    content="Shop 10,000+ premium products from 500+ top brands. Free shipping on orders over $50." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <script>
+    // PWA Manifest (inline blob — avoids needing a separate manifest.json file)
+    const _manifest = {
+      name: 'NEXMART — Premium Online Store',
+      short_name: 'NEXMART',
+      description: 'Shop premium products at unbeatable prices',
+      start_url: '/',
+      display: 'standalone',
+      background_color: '#0a0a0a',
+      theme_color: '#FF4D00',
+      icons: [
+        { src: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23FF4D00' width='100' height='100' rx='20'/><text y='70' x='18' font-size='60' fill='white' font-weight='bold'>N</text></svg>", sizes: '192x192', type: 'image/svg+xml' },
+        { src: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23FF4D00' width='100' height='100' rx='20'/><text y='70' x='18' font-size='60' fill='white' font-weight='bold'>N</text></svg>", sizes: '512x512', type: 'image/svg+xml' }
+      ]
+    };
+    const _mBlob = new Blob([JSON.stringify(_manifest)], { type: 'application/json' });
+    const _mURL = URL.createObjectURL(_mBlob);
+    const _mLink = document.createElement('link');
+    _mLink.rel = 'manifest'; _mLink.href = _mURL;
+    document.head.appendChild(_mLink);
+
+    // Theme color
+    const _tm = document.createElement('meta');
+    _tm.name = 'theme-color'; _tm.content = '#FF4D00';
+    document.head.appendChild(_tm);
+
+    // Apple PWA metas
+    const _am1 = document.createElement('meta');
+    _am1.name = 'apple-mobile-web-app-capable'; _am1.content = 'yes';
+    document.head.appendChild(_am1);
+    const _am2 = document.createElement('meta');
+    _am2.name = 'apple-mobile-web-app-status-bar-style'; _am2.content = 'black-translucent';
+    document.head.appendChild(_am2);
+
+    // Service Worker (inline blob)
+    if ('serviceWorker' in navigator) {
+      const swCode = `
+        const CACHE = 'nexmart-v1';
+        self.addEventListener('install', e => {
+          e.waitUntil(caches.open(CACHE).then(c => c.addAll(['/'])));
+          self.skipWaiting();
+        });
+        self.addEventListener('activate', e => {
+          e.waitUntil(caches.keys().then(keys =>
+            Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
+          ));
+          self.clients.claim();
+        });
+        self.addEventListener('fetch', e => {
+          if (e.request.mode === 'navigate') {
+            e.respondWith(fetch(e.request).catch(() => caches.match('/')));
+          } else {
+            e.respondWith(
+              caches.match(e.request).then(r => r || fetch(e.request).then(resp => {
+                const clone = resp.clone();
+                caches.open(CACHE).then(c => c.put(e.request, clone));
+                return resp;
+              }).catch(() => new Response('', { status: 408 })))
+            );
+          }
+        });
+      `;
+      const swBlob = new Blob([swCode], { type: 'application/javascript' });
+      navigator.serviceWorker.register(URL.createObjectURL(swBlob)).catch(() => { });
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

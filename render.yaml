@@ -1,0 +1,22 @@
+# Render Blueprint — deploys the NEXMART API.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: nexmart-api
+    runtime: python
+    rootDir: nexmart-api
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.0
+      - key: DATABASE_URL
+        sync: false # paste your Neon connection string in the Render dashboard
+      - key: SECRET_KEY
+        generateValue: true
+      - key: FRONTEND_URL
+        sync: false # your Vercel URL, e.g. https://nexmart.vercel.app
+      - key: DEBUG
+        value: "False"

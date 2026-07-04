@@ -1,0 +1,14 @@
+# Local prototype kept out of the repo
+me.html
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Env files (belt and braces — subprojects ignore these too)
+.env
+.env.local
