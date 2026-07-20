@@ -85,6 +85,17 @@ credentials (override with `TEST_DATABASE_URL`). The suite refuses to start if
 the target database name does not contain `test`, since it drops the schema
 between runs.
 
+### Responsive / render smoke test
+
+Catches blank pages (a route that throws on render) and horizontal overflow
+across 10 routes × 5 viewports, from 320px to 1440px:
+
+```bash
+cd nexmart
+npm run dev              # in one terminal
+npm run test:responsive  # in another
+```
+
 ## Deployment
 
 The repo is wired for a free-tier production stack:

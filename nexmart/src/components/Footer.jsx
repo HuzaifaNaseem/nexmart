@@ -27,8 +27,10 @@ export default function Footer(){
               <p className="text-sm text-green-400 font-medium">✓ Subscribed! Thank you.</p>
             ):(
               <form onSubmit={e=>{e.preventDefault();if(ftEmail.includes('@'))setFtDone(true)}} className="flex">
-                <input type="email" required placeholder="Your email" value={ftEmail} onChange={e=>setFtEmail(e.target.value)} className="flex-1 px-3 py-2 bg-white/10 rounded-l-lg text-sm text-white placeholder-gray-500 border border-white/10 focus:outline-none focus:border-accent"/>
-                <button type="submit" className="px-3 py-2 bg-accent text-white text-sm font-medium rounded-r-lg hover:bg-accent/90 btn-press">Join</button>
+                {/* min-w-0 lets the input shrink below its intrinsic width; without it
+                    the field pushes the button outside the viewport in narrow columns. */}
+                <input type="email" required placeholder="Your email" value={ftEmail} onChange={e=>setFtEmail(e.target.value)} className="flex-1 min-w-0 px-3 py-2 bg-white/10 rounded-l-lg text-sm text-white placeholder-gray-500 border border-white/10 focus:outline-none focus:border-accent"/>
+                <button type="submit" className="shrink-0 px-3 py-2 bg-accent text-white text-sm font-medium rounded-r-lg hover:bg-accent/90 btn-press">Join</button>
               </form>
             )}
           </div>

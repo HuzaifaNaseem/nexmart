@@ -56,12 +56,6 @@ export default function ShopPage(){
   useEffect(()=>{setLoading(true);const t=setTimeout(()=>setLoading(false),600);return()=>clearTimeout(t)},[selCats,priceRange,ratingF,selBrands,filterColor,filterInStock,filterOnSale,sort]);
   // Reset visible count whenever filters/sort change
   useEffect(()=>{setVisibleCount(20);},[selCats,priceRange,ratingF,selBrands,filterColor,filterInStock,filterOnSale,sort]);
-  // IntersectionObserver sentinel for infinite scroll
-  useEffect(()=>{
-    const el=sentinelRef.current;if(!el)return;
-    const obs=new IntersectionObserver(([entry])=>{if(entry.isIntersecting)setVisibleCount(p=>p+12);},{rootMargin:'300px'});
-    obs.observe(el);return()=>obs.disconnect();
-  },[filtered.length]);
   useEffect(()=>{
     if(!showSaved)return;
     const h=e=>{if(savedRef.current&&!savedRef.current.contains(e.target))setShowSaved(false)};
@@ -88,7 +82,14 @@ export default function ShopPage(){
       case 'name-za':    r=[...r].sort((a,b)=>b.name.localeCompare(a.name));break;
     }
     return r;
-  },[selCats,priceRange,ratingF,selBrands,filterColor,filterInStock,filterOnSale,sort]);
+  },[allProducts,selCats,priceRange,ratingF,selBrands,filterColor,filterInStock,filterOnSale,sort]);
+
+  // Infinite-scroll sentinel. Declared after `filtered` because it depends on it.
+  useEffect(()=>{
+    const el=sentinelRef.current;if(!el)return;
+    const obs=new IntersectionObserver(([entry])=>{if(entry.isIntersecting)setVisibleCount(p=>p+12);},{rootMargin:'300px'});
+    obs.observe(el);return()=>obs.disconnect();
+  },[filtered.length]);
 
   const clear=()=>{setSelCats([]);setPriceRange([MIN_PRICE,MAX_PRICE]);setRatingF(0);setSelBrands([]);setFilterColor(null);setFilterInStock(false);setFilterOnSale(false);};
 

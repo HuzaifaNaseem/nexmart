@@ -48,7 +48,7 @@ export default function Header({onCartOpen}){
       <PromoBanner/>
       <header className={`sticky top-0 z-50 dm-header transition-shadow duration-300 ${scrolled?'shadow-md':''}`} style={{borderBottom:'1px solid var(--border-color)'}}>
         <div className="max-w-7xl mx-auto px-4 h-[64px] flex items-center gap-3">
-          <button className="lg:hidden btn-press dm-text" onClick={()=>setMobMenu(!mobMenu)}
+          <button className="lg:hidden btn-press dm-text -ml-2 p-2 flex items-center justify-center min-w-[44px] min-h-[44px]" onClick={()=>setMobMenu(!mobMenu)}
             aria-label="Open navigation menu"><Ic.Menu/></button>
           <a href="#/" className="flex items-center gap-2 shrink-0" aria-label="NEXMART home">
             <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center"><span className="text-white font-heading font-bold text-base">N</span></div>

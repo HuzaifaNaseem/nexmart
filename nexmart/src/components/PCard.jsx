@@ -25,7 +25,7 @@ export default function PCard({product:p,index:idx=0}){
         {disc>0&&<span className="absolute top-2 right-2 px-2 py-0.5 text-[10px] font-bold bg-red-500 text-white rounded-full">-{disc}%</span>}
         <button onClick={e=>{e.preventDefault();e.stopPropagation();dp({type:'TOG_WISH',id:p.id});dp({type:'NOTIFY',p:{tp:'success',msg:isW?'Removed from wishlist':'♥ Added to wishlist'}})}}
           aria-label={isW?`Remove ${p.name} from wishlist`:`Add ${p.name} to wishlist`}
-          className="card-wishlist absolute top-2 right-10 w-7 h-7 rounded-full dm-card flex items-center justify-center shadow-sm hover:scale-110 transition-all">
+          className="card-wishlist absolute top-2 right-9 w-9 h-9 sm:w-7 sm:h-7 rounded-full dm-card flex items-center justify-center shadow-sm hover:scale-110 transition-all">
           <Ic.Heart s={14} f={isW?'#FF4D00':'none'} c={isW?'text-accent':'dm-text-muted'}/>
         </button>
         <div className="card-actions absolute bottom-0 left-0 right-0 p-2.5 space-y-1.5">
