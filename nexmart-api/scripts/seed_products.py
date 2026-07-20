@@ -361,11 +361,28 @@ async def get_or_create_admin(client: httpx.AsyncClient) -> str:
     return token
 
 
+def _ssl_context():
+    """Verify TLS using the OS trust store when available.
+
+    Some Windows machines run TLS-inspecting antivirus whose root CA is in the
+    system store but not in certifi, which would otherwise fail verification.
+    """
+    try:
+        import ssl
+
+        import truststore
+
+        return truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+    except ImportError:
+        return True
+
+
 async def seed():
     print("\n🌱  NEXMART Product Seeder")
     print("=" * 50)
+    print(f"   Target: {BASE}")
 
-    async with httpx.AsyncClient(base_url=BASE, timeout=30) as client:
+    async with httpx.AsyncClient(base_url=BASE, timeout=60, verify=_ssl_context()) as client:
         token = await get_or_create_admin(client)
         headers = {"Authorization": f"Bearer {token}"}
 

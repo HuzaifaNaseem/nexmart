@@ -2,6 +2,16 @@
 
 Full-stack e-commerce application: React storefront, FastAPI backend, PostgreSQL database.
 
+**Live demo**
+
+| | |
+|---|---|
+| Storefront | https://nexmart-muhammad-huzaifa-naseems-projects.vercel.app |
+| API docs | https://nexmart-api-mc3l.onrender.com/docs |
+
+> The API runs on a free tier that sleeps after 15 minutes of inactivity — the
+> first request after idle can take up to 50 seconds to wake.
+
 ## Features
 
 - 🛍️ Product catalog with search, filters, sorting, comparison, and quick view
