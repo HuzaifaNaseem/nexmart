@@ -11,6 +11,8 @@ from collections import defaultdict, deque
 
 from fastapi import HTTPException, Request, status
 
+from app.config import settings
+
 
 class RateLimiter:
     def __init__(self, times: int, seconds: int) -> None:
@@ -19,6 +21,9 @@ class RateLimiter:
         self._hits: dict[str, deque[float]] = defaultdict(deque)
 
     async def __call__(self, request: Request) -> None:
+        if not settings.RATE_LIMIT_ENABLED:
+            return
+
         ip = request.client.host if request.client else "unknown"
         key = f"{request.url.path}:{ip}"
         now = time.monotonic()

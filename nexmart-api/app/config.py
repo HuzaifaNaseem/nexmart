@@ -17,6 +17,8 @@ class Settings(BaseSettings):
     FRONTEND_URL: str = "http://localhost:5173"
     DEBUG: bool = True
     APP_NAME: str = "NEXMART API"
+    # Disable only where an upstream proxy/CDN already throttles, or in tests.
+    RATE_LIMIT_ENABLED: bool = True
 
     @field_validator("DATABASE_URL", mode="before")
     @classmethod

@@ -12,3 +12,8 @@ Thumbs.db
 # Env files (belt and braces — subprojects ignore these too)
 .env
 .env.local
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/

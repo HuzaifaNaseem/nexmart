@@ -57,6 +57,24 @@ NEXMART_ADMIN_PASSWORD=<choose-a-password> python -m scripts.seed_products
 # then grant admin: UPDATE users SET is_admin = true WHERE email = 'admin@nexmart.com';
 ```
 
+## Tests
+
+75 integration tests cover authentication, catalog, cart, checkout, reviews,
+wishlist, admin access control, and rate limiting. They exercise the real ASGI
+app and a real PostgreSQL schema — no mocks.
+
+```bash
+cd nexmart-api
+pip install -r requirements-dev.txt
+createdb nexmart_test          # once
+pytest                          # or: pytest -v
+```
+
+Tests run against a dedicated `nexmart_test` database, derived from your `.env`
+credentials (override with `TEST_DATABASE_URL`). The suite refuses to start if
+the target database name does not contain `test`, since it drops the schema
+between runs.
+
 ## Deployment
 
 The repo is wired for a free-tier production stack:
