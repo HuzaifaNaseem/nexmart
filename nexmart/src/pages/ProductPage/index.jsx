@@ -12,6 +12,7 @@ import { addRecentlyViewed } from '../../utils/recentlyViewed';
 import { fetchProduct, fetchProducts } from '../../api/products';
 import { adaptProduct, adaptProducts } from '../../utils/productAdapter';
 import ProductReviews from '../../components/ProductReviews';
+import ProductGallery from '../../components/ProductGallery';
 
 export default function ProductPage(){
   const id = window.location.hash.split('/product/')[1]?.split('?')[0] || '';
@@ -36,8 +37,6 @@ export default function ProductPage(){
   },[id]);
   const[tab,setTab]=useState('desc');
   /* ── Social proof + urgency state ── */
-  const[viewers,setViewers]=useState(()=>Math.floor(Math.random()*17)+8);
-  useEffect(()=>{const iv=setInterval(()=>setViewers(v=>Math.min(24,Math.max(8,v+(Math.random()>.5?1:-1)*(Math.floor(Math.random()*3)+1)))),15000);return()=>clearInterval(iv)},[]);
   const[deliveryCd,setDeliveryCd]=useState('');
   useEffect(()=>{
     const calc=()=>{const now=new Date();const cut=new Date();cut.setHours(17,0,0,0);if(cut<=now)cut.setDate(cut.getDate()+1);const d=cut-now;return`${String(Math.floor(d/3600000)).padStart(2,'0')}:${String(Math.floor((d%3600000)/60000)).padStart(2,'0')}:${String(Math.floor((d%60000)/1000)).padStart(2,'0')}`;};
@@ -62,10 +61,7 @@ export default function ProductPage(){
     <div className="max-w-7xl mx-auto px-4 py-6 anim-fadeIn">
       <div className="flex items-center gap-2 text-sm dm-text-muted mb-5"><a href="#/" className="hover:text-accent">Home</a><span>/</span><a href={`#/shop?category=${encodeURIComponent(p.category)}`} className="hover:text-accent">{p.category}</a><span>/</span><span className="dm-text font-medium truncate">{p.name}</span></div>
       <div className="grid lg:grid-cols-2 gap-8">
-        <div>
-          <div className="aspect-square rounded-2xl overflow-hidden dm-surface mb-3"><img src={p.images[mainImg]} alt={p.name} className="w-full h-full object-cover"/></div>
-          <div className="flex gap-2">{p.images.map((img,i)=><button key={i} onClick={()=>setMainImg(i)} className={`w-16 h-16 rounded-xl overflow-hidden border-2 transition-all ${mainImg===i?'border-accent':'border-transparent hover:opacity-80'}`}><img src={img} alt="" className="w-full h-full object-cover"/></button>)}</div>
-        </div>
+        <div><ProductGallery product={p}/></div>
         <div>
           <p className="text-sm text-accent font-medium uppercase tracking-wider">{p.brand}</p>
           <h1 className="font-heading text-2xl lg:text-3xl font-bold dm-text mt-1">{p.name}</h1>
@@ -77,7 +73,8 @@ export default function ProductPage(){
           <LowStockAlert product={p}/>
           {/* ── Social proof + urgency ── */}
           <div className="mt-3 space-y-2">
-            <p className="text-sm text-blue-600 font-medium flex items-center gap-1.5"><span className="inline-block w-2 h-2 bg-blue-500 rounded-full anim-pulse2"/>👁 {viewers} people viewing this right now</p>
+            {/* Only facts we can actually stand behind: real review volume. */}
+            {p.reviews>0&&<p className="text-sm dm-text-sec font-medium flex items-center gap-1.5">⭐ Rated {Number(p.rating).toFixed(1)} by {p.reviews} verified {p.reviews===1?'buyer':'buyers'}</p>}
             <p className="text-sm text-orange-600 font-medium">🔥 {Math.round(p.reviews/10)} sold in the last 24 hours</p>
             <div><div className="flex justify-between text-[11px] dm-text-muted mb-1"><span>Stock level</span><span>{p.stockCount} units left</span></div><div className="h-1.5 dm-surface rounded-full overflow-hidden border dm-border"><div className="h-full bg-red-500 rounded-full" style={{width:`${Math.min(100,p.stockCount)}%`}}/></div></div>
             {deliveryCd&&<p className="text-sm font-medium text-green-700 bg-green-50 dark:bg-green-900/20 rounded-lg px-3 py-2">⚡ Order in <span className="font-mono font-bold">{deliveryCd}</span> for delivery by {(()=>{const d=new Date();d.setDate(d.getDate()+4);return d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})})()}</p>}

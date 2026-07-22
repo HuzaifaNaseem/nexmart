@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { useStore } from '../../context/AppContext';
 import { Ic, Stars } from '../../components/icons';
-import { useProducts } from '../../hooks/useProducts';
+import { useProducts, useCategories } from '../../hooks/useProducts';
 import { formatPrice } from '../../utils/currency';
 import { SkeletonCard } from '../../components/ui/Skeleton';
 import PCard from '../../components/PCard';
@@ -11,9 +11,18 @@ import HeroCarousel from '../../components/HeroCarousel';
 import WhatsHotSection from '../../components/WhatsHotSection';
 import PersonalizedSections from '../../components/PersonalizedSections';
 
+const CAT_EMOJI=[
+  [/phone|mobile|tablet/i,'📱'],[/laptop|computer/i,'💻'],[/watch/i,'⌚'],
+  [/shoe|sneaker/i,'👟'],[/shirt|top|dress|cloth/i,'👕'],[/bag|handbag/i,'👜'],
+  [/jewel|ring/i,'💍'],[/sunglass/i,'🕶'],[/fragrance|perfume/i,'🌸'],
+  [/beauty|skin/i,'✨'],[/furniture|home|decor/i,'🛋'],[/kitchen/i,'🍳'],
+  [/grocer|food/i,'🥑'],[/motorcycle|vehicle/i,'🏍'],[/sport/i,'🏅'],
+];
+
 export default function HomePage(){
   const{st,dp,currency}=useStore();
   const PRODUCTS=useProducts();
+  const liveCats=useCategories(12);
   const[countdown,setCountdown]=useState({d:0,h:0,m:0,s:0});
   const[featTab,setFeatTab]=useState('All');
   const[email,setEmail]=useState('');
@@ -48,14 +57,16 @@ export default function HomePage(){
   },[featTab,PRODUCTS]);
 
   const saleProducts=PRODUCTS.filter(p=>p.originalPrice).sort((a,b)=>(b.originalPrice-b.price)-(a.originalPrice-a.price)).slice(0,4);
-  const cats=[
-    {name:'Electronics',count:4,img:'https://images.unsplash.com/photo-1518543150838-92f11dbf7c00?w=600&q=80',emoji:'💻',trending:true, subs:['Laptops','Phones','Audio','Cameras']},
-    {name:'Fashion',count:4,img:'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80',emoji:'👗',trending:false,subs:["Women's","Men's",'Shoes','Bags']},
-    {name:'Home & Living',count:2,img:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80',emoji:'🏠',trending:false,subs:['Furniture','Kitchen','Décor','Lighting']},
-    {name:'Beauty',count:2,img:'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80',emoji:'✨',trending:true, subs:['Skincare','Makeup','Hair','Fragrance']},
-    {name:'Sports',count:2,img:'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',emoji:'🏃',trending:false,subs:['Running','Yoga','Outdoor','Cycling']},
-  ];
-  const brandsList=['Apple','Nike','Sony','Canon','Coach','Chanel','Lululemon','Garmin','La Mer'];
+  // Categories, their counts and their artwork all come from the live
+  // catalogue — a tile can never advertise a section that has nothing in it.
+  const cats=liveCats.slice(0,5).map((c,i)=>({
+    ...c,
+    emoji:CAT_EMOJI.find(([re])=>re.test(c.name))?.[1]||'🛍',
+    trending:i<2,
+    // Real brands stocked in this category, shown on hover.
+    brands:[...new Set(PRODUCTS.filter(p=>p.category===c.name).map(p=>p.brand).filter(Boolean))].slice(0,4),
+  }));
+  const brandsList=useMemo(()=>[...new Set(PRODUCTS.map(p=>p.brand).filter(Boolean))].slice(0,9),[PRODUCTS]);
   const reviews=[
     {name:'Sarah M.',av:'SM',r:5,text:'Absolutely love this product! The quality exceeded my expectations. Fast shipping and great packaging.',date:'Jan 15, 2025',prod:'Sony WH-1000XM5'},
     {name:'James K.',av:'JK',r:5,text:"Best purchase I've made this year. The attention to detail is remarkable and customer service was outstanding.",date:'Jan 8, 2025',prod:'MacBook Air M3'},
@@ -84,9 +95,11 @@ export default function HomePage(){
                 <p className="text-xs text-white/80 mt-0.5">{c.count} Products</p>
                 <span className="cat-cta mt-2 text-xs font-semibold flex items-center gap-1">Shop Now →</span>
               </div>
-              <div className="cat-hover-tags">
-                {c.subs.map(s=><span key={s} className="cat-tag-pill">{s}</span>)}
-              </div>
+              {c.brands?.length>0&&(
+                <div className="cat-hover-tags">
+                  {c.brands.map(b=><span key={b} className="cat-tag-pill">{b}</span>)}
+                </div>
+              )}
             </a>
           ))}
         </div>

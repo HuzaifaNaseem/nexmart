@@ -29,7 +29,7 @@ export default function RecentlyViewedRow({ excludeId }) {
         {products.map(p => (
           <div key={p.id} className="rv-card" onClick={() => nav(`#/product/${p.id}`)}>
             <div className="aspect-square overflow-hidden">
-              <img src={p.image} alt={p.name} className="w-full h-full object-cover"/>
+              <img src={p.image} alt={p.name} className="w-full h-full object-contain p-2"/>
             </div>
             <div className="p-2.5">
               <p className="text-xs font-medium dm-text truncate leading-tight">{p.name}</p>

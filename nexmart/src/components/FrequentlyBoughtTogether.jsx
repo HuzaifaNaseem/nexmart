@@ -50,7 +50,7 @@ export default function FrequentlyBoughtTogether({ mainProduct }) {
           <div key={p.id} className="flex items-center gap-3">
             {i > 0 && <span className="fbt-plus">+</span>}
             <div className={`fbt-item ${selected.has(p.id) ? 'selected' : ''}`} onClick={() => toggle(p.id)}>
-              <img src={p.image} alt={p.name} className="w-20 h-20 object-cover"/>
+              <img src={p.image} alt={p.name} className="w-20 h-20 object-contain p-1 dm-surface rounded-lg"/>
               {selected.has(p.id) && <div className="fbt-check">✓</div>}
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function FrequentlyBoughtTogether({ mainProduct }) {
               disabled={p.id === mainProduct.id}
               className="accent-accent w-4 h-4"
             />
-            <img src={p.image} alt="" className="w-8 h-8 object-cover rounded-md"/>
+            <img src={p.image} alt="" className="w-8 h-8 object-contain dm-surface rounded-md"/>
             <span className="text-sm dm-text flex-1 truncate">{p.name}</span>
             <span className="text-sm font-semibold text-accent flex-shrink-0">{formatPrice(p.price, currency)}</span>
           </label>

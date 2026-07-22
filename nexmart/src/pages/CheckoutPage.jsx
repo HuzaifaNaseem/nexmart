@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useMemo } from 'react';
 import { Fragment } from 'react';
 import { useStore, AppCtx } from '../context/AppContext';
 import { formatPrice } from '../utils/currency';
@@ -8,6 +8,30 @@ import { POINTS_PER_DOLLAR } from '../utils/loyalty';
 import PointsUseSection from '../components/PointsUseSection';
 import { checkout as apiCheckout } from '../api/orders';
 import { clearCart as apiClearCart, addToCart as apiAddToCart } from '../api/cart';
+
+/**
+ * Defined at module scope on purpose. When this lived inside CheckoutPage it
+ * was a brand-new component type on every render, so React unmounted and
+ * remounted each input on every keystroke — the field lost focus and only the
+ * first character of anything typed survived.
+ */
+let inpSeq=0;
+const Inp=({label,val,onChange,err,ph='',type='text',req=true,cls='',autoComplete,inputMode})=>{
+  const id=useMemo(()=>`chk-${++inpSeq}`,[]);
+  const errId=`${id}-error`;
+  return(
+    <div className={cls}>
+      <label htmlFor={id} className="block text-sm font-medium dm-text-sec mb-1">
+        {label}{req&&<span className="text-red-500" aria-hidden="true">*</span>}
+      </label>
+      <input id={id} type={type} value={val} onChange={onChange} placeholder={ph}
+        required={req} autoComplete={autoComplete} inputMode={inputMode}
+        aria-invalid={!!err} aria-describedby={err?errId:undefined}
+        className={`w-full px-3 py-2.5 border rounded-xl text-sm transition-all dm-input ${err?'border-red-400':'dm-border'}`}/>
+      {err&&<p id={errId} className="text-xs text-red-500 mt-0.5">{err}</p>}
+    </div>
+  );
+};
 
 export default function CheckoutPage(){
   const{st,dp,currency}=useStore();
@@ -59,11 +83,6 @@ export default function CheckoutPage(){
     nav('#/success?order='+orderId+'&email='+encodeURIComponent(sh.email)+'&pts='+ptsEarned);
   };
 
-  const Inp=({label,val,onChange,err,ph='',type='text',req=true,cls=''})=>(
-    <div className={cls}><label className="block text-sm font-medium dm-text-sec mb-1">{label}{req&&<span className="text-red-500">*</span>}</label>
-    <input type={type} value={val} onChange={onChange} placeholder={ph} className={`w-full px-3 py-2.5 border rounded-xl text-sm transition-all dm-input ${err?'border-red-400':'dm-border'}`}/>
-    {err&&<p className="text-xs text-red-500 mt-0.5">{err}</p>}</div>
-  );
 
   return(
     <div className="max-w-7xl mx-auto px-4 py-6 anim-fadeIn">
@@ -90,16 +109,16 @@ export default function CheckoutPage(){
             <div className="dm-card rounded-2xl border dm-border p-5 anim-fadeInUp">
               <h2 className="font-heading text-lg font-bold dm-text mb-5">Shipping Information</h2>
               <div className="grid grid-cols-2 gap-3">
-                <Inp label="First Name" val={sh.fn} err={errs.fn} ph="John" onChange={e=>setSh({...sh,fn:e.target.value})}/>
-                <Inp label="Last Name" val={sh.ln} err={errs.ln} ph="Doe" onChange={e=>setSh({...sh,ln:e.target.value})}/>
-                <Inp label="Email" type="email" val={sh.email} err={errs.email} ph="john@example.com" onChange={e=>setSh({...sh,email:e.target.value})} cls="col-span-2 sm:col-span-1"/>
-                <Inp label="Phone" type="tel" val={sh.phone} err={errs.phone} ph="(555) 123-4567" onChange={e=>setSh({...sh,phone:e.target.value})} cls="col-span-2 sm:col-span-1"/>
-                <Inp label="Address" val={sh.addr1} err={errs.addr1} ph="123 Main Street" onChange={e=>setSh({...sh,addr1:e.target.value})} cls="col-span-2"/>
-                <Inp label="Address Line 2" val={sh.addr2} req={false} ph="Apt, Suite (optional)" onChange={e=>setSh({...sh,addr2:e.target.value})} cls="col-span-2"/>
-                <Inp label="City" val={sh.city} err={errs.city} ph="New York" onChange={e=>setSh({...sh,city:e.target.value})}/>
+                <Inp label="First Name" autoComplete="given-name" val={sh.fn} err={errs.fn} ph="John" onChange={e=>setSh({...sh,fn:e.target.value})}/>
+                <Inp label="Last Name" autoComplete="family-name" val={sh.ln} err={errs.ln} ph="Doe" onChange={e=>setSh({...sh,ln:e.target.value})}/>
+                <Inp label="Email" type="email" autoComplete="email" inputMode="email" val={sh.email} err={errs.email} ph="john@example.com" onChange={e=>setSh({...sh,email:e.target.value})} cls="col-span-2 sm:col-span-1"/>
+                <Inp label="Phone" type="tel" autoComplete="tel" inputMode="tel" val={sh.phone} err={errs.phone} ph="(555) 123-4567" onChange={e=>setSh({...sh,phone:e.target.value})} cls="col-span-2 sm:col-span-1"/>
+                <Inp label="Address" autoComplete="address-line1" val={sh.addr1} err={errs.addr1} ph="123 Main Street" onChange={e=>setSh({...sh,addr1:e.target.value})} cls="col-span-2"/>
+                <Inp label="Address Line 2" autoComplete="address-line2" val={sh.addr2} req={false} ph="Apt, Suite (optional)" onChange={e=>setSh({...sh,addr2:e.target.value})} cls="col-span-2"/>
+                <Inp label="City" autoComplete="address-level2" val={sh.city} err={errs.city} ph="New York" onChange={e=>setSh({...sh,city:e.target.value})}/>
                 <div className="grid grid-cols-2 gap-3">
-                  <Inp label="State" val={sh.state} err={errs.state} ph="NY" onChange={e=>setSh({...sh,state:e.target.value})}/>
-                  <Inp label="ZIP" val={sh.zip} err={errs.zip} ph="10001" onChange={e=>setSh({...sh,zip:e.target.value})}/>
+                  <Inp label="State" autoComplete="address-level1" val={sh.state} err={errs.state} ph="NY" onChange={e=>setSh({...sh,state:e.target.value})}/>
+                  <Inp label="ZIP" autoComplete="postal-code" inputMode="numeric" val={sh.zip} err={errs.zip} ph="10001" onChange={e=>setSh({...sh,zip:e.target.value})}/>
                 </div>
               </div>
 
@@ -140,7 +159,7 @@ export default function CheckoutPage(){
                     </div>
                     {errs.num&&<p className="text-xs text-red-500 mt-0.5">{errs.num}</p>}
                   </div>
-                  <Inp label="Cardholder Name" val={pay.name} err={errs.name} ph="John Doe" onChange={e=>setPay({...pay,name:e.target.value})}/>
+                  <Inp label="Cardholder Name" autoComplete="cc-name" val={pay.name} err={errs.name} ph="John Doe" onChange={e=>setPay({...pay,name:e.target.value})}/>
                   <div className="grid grid-cols-2 gap-3">
                     <div>
                       <label className="block text-sm font-medium dm-text-sec mb-1">Expiry<span className="text-red-500">*</span></label>

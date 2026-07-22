@@ -14,7 +14,7 @@ export default function WishlistPage(){
       <div className="space-y-3">
         {items.map((p,i)=>(
           <div key={p.id} className="flex gap-4 p-4 dm-card rounded-xl border dm-border anim-fadeInUp" style={{animationDelay:`${i*.04}s`,opacity:0,animationFillMode:'forwards'}}>
-            <a href={`#/product/${p.id}`}><img src={p.image} alt={p.name} className="w-20 h-20 object-cover rounded-xl"/></a>
+            <a href={`#/product/${p.id}`}><img src={p.image} alt={p.name} className="w-20 h-20 object-contain p-1 dm-surface rounded-xl"/></a>
             <div className="flex-1 min-w-0">
               <p className="text-xs dm-text-muted uppercase">{p.brand}</p>
               <a href={`#/product/${p.id}`}><h3 className="font-semibold dm-text hover:text-accent transition-colors">{p.name}</h3></a>

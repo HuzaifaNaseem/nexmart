@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useStore } from '../../context/AppContext';
 import { Ic } from '../icons';
-import { CATEGORIES } from '../../data/products';
+import { useCategories } from '../../hooks/useProducts';
 import { CURRENCIES } from '../../utils/currency';
 import { nav } from '../../utils/nav';
 import PromoBanner from './PromoBanner';
@@ -13,6 +13,7 @@ import MegaMenu from './MegaMenu';
 
 export default function Header({onCartOpen}){
   const{st,currency,setCurrency,darkMode,setDarkMode}=useStore();
+  const liveCats=useCategories(8);
   const[scrolled,setScrolled]=useState(false);
   const[searchRaw,setSearchRaw]=useState('');  // immediate input value
   const[search,setSearch]=useState('');         // debounced — passed to SearchDropdown
@@ -76,15 +77,21 @@ export default function Header({onCartOpen}){
               aria-label={darkMode?'Switch to light mode':'Switch to dark mode'}>
               <span className="text-lg leading-none">{darkMode?'☀️':'🌙'}</span>
             </button>
-            <button className="relative btn-press p-2 rounded-full hover:opacity-80 hidden sm:block dm-text"
+            {/* Icons are paired with a visible label wherever there is room —
+                the accessible name is present regardless of screen width. */}
+            <button className="relative btn-press icon-action hover:opacity-100 hidden sm:flex dm-text"
               onClick={()=>nav('#/wishlist')}
               aria-label={`Wishlist${st.wish.length>0?`, ${st.wish.length} items`:''}`}>
-              <Ic.Heart s={20}/>{st.wish.length>0&&<span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-accent text-white text-[9px] font-bold rounded-full flex items-center justify-center">{st.wish.length}</span>}
+              <Ic.Heart s={19}/>
+              <span className="icon-action-label hidden md:block">Wishlist</span>
+              {st.wish.length>0&&<span className="absolute top-0.5 right-1 w-4 h-4 bg-accent text-white text-[9px] font-bold rounded-full flex items-center justify-center">{st.wish.length}</span>}
             </button>
-            <button className="relative btn-press p-2 rounded-full hover:opacity-80 dm-text"
+            <button className="relative btn-press icon-action dm-text"
               onClick={onCartOpen}
               aria-label={`Shopping cart${cc>0?`, ${cc} items`:''}`}>
-              <Ic.Cart s={20}/>{cc>0&&<span className="absolute -top-0.5 -right-0.5 w-5 h-5 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center anim-scaleIn">{cc}</span>}
+              <Ic.Cart s={19}/>
+              <span className="icon-action-label hidden md:block">Cart</span>
+              {cc>0&&<span className="absolute top-0.5 right-1 w-[18px] h-[18px] bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center anim-scaleIn">{cc}</span>}
             </button>
             <div className="hidden sm:block"><PointsPill/></div>
             <div className="hidden sm:block"><NotificationCenter/></div>
@@ -95,7 +102,8 @@ export default function Header({onCartOpen}){
           <MegaMenu/>
         </div>
         {mobMenu&&<div className="lg:hidden fixed inset-0 top-[64px] dm-bg z-40 anim-fadeIn overflow-auto p-4">
-          {CATEGORIES.map(c=><a key={c} href={c==='All'?'#/shop':`#/shop?category=${encodeURIComponent(c)}`} onClick={()=>setMobMenu(false)} className="block px-4 py-3 text-base font-medium dm-text-sec rounded-xl hover:opacity-80">{c}</a>)}
+          <a href="#/shop" onClick={()=>setMobMenu(false)} className="block px-4 py-3 text-base font-medium dm-text-sec rounded-xl hover:opacity-80">All Products</a>
+          {liveCats.map(c=><a key={c.name} href={`#/shop?category=${encodeURIComponent(c.name)}`} onClick={()=>setMobMenu(false)} className="flex items-center justify-between px-4 py-3 text-base font-medium dm-text-sec rounded-xl hover:opacity-80">{c.name}<span className="text-xs dm-text-muted">{c.count}</span></a>)}
           <hr className="my-3 dm-border"/>
           <a href="#/wishlist" onClick={()=>setMobMenu(false)} className="block px-4 py-3 text-base font-medium dm-text-sec hover:opacity-80">♥ Wishlist</a>
           <a href="#/account" onClick={()=>setMobMenu(false)} className="block px-4 py-3 text-base font-medium dm-text-sec hover:opacity-80">👤 Account</a>

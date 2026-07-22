@@ -26,7 +26,7 @@ export default function CartDrawer({open,onClose}){
             <div className="flex-1 overflow-auto p-5 space-y-3">
               {st.cart.map((it,idx)=>(
                 <div key={idx} className="flex gap-3 pb-3 border-b dm-border last:border-0">
-                  <a href={`#/product/${it.pid}`} onClick={onClose}><img src={it.image} alt="" className="w-16 h-16 object-cover rounded-xl"/></a>
+                  <a href={`#/product/${it.pid}`} onClick={onClose}><img src={it.image} alt="" className="w-16 h-16 object-contain p-1 dm-surface rounded-xl"/></a>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-sm font-semibold dm-text truncate">{it.name}</h4>
                     <p className="text-[11px] dm-text-muted">{[it.color,it.size].filter(Boolean).join(' · ')}</p>

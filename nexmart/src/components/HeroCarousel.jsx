@@ -8,9 +8,9 @@ const SLIDES = [
     accent: 'Style',
     sub: 'Shop 10,000+ premium products from 500+ top brands worldwide. Curated for every lifestyle.',
     cta: 'Shop Now', ctaHref: '#/shop',
-    cta2: 'View Deals', cta2Href: '#/shop?category=Electronics',
+    cta2: 'View Deals', cta2Href: '#/shop',
     stats: [{v:'50K+',l:'Customers'},{v:'500+',l:'Brands'},{v:'4.8⭐',l:'Rating'}],
-    bg: 'linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)',
+    bg: 'radial-gradient(120% 120% at 15% 20%, #3A2A22 0%, #241B16 45%, #17110D 100%)',
     accentColor: '#FF4D00',
   },
   {
@@ -19,9 +19,9 @@ const SLIDES = [
     accent: 'Top Brands',
     sub: 'Electronics, Fashion, Home & more. Limited time deals you cannot miss — act fast!',
     cta: 'See All Deals', ctaHref: '#/shop',
-    cta2: 'Electronics', cta2Href: '#/shop?category=Electronics',
+    cta2: 'Browse All', cta2Href: '#/shop',
     stats: [{v:'100+',l:'Deals'},{v:'5',l:'Categories'},{v:'48h',l:'Left'}],
-    bg: 'linear-gradient(135deg,#FF4D00 0%,#e63946 50%,#c1121f 100%)',
+    bg: 'radial-gradient(120% 120% at 20% 25%, #FF8A4C 0%, #E4572E 48%, #A6321B 100%)',
     accentColor: '#ffffff',
   },
   {
@@ -32,7 +32,7 @@ const SLIDES = [
     cta: 'View Rewards', ctaHref: '#/rewards',
     cta2: 'Start Shopping', cta2Href: '#/shop',
     stats: [{v:'4',l:'Tiers'},{v:'3×',l:'Max Points'},{v:'$0.01',l:'Per Point'}],
-    bg: 'linear-gradient(135deg,#6366F1 0%,#7c3aed 50%,#4f46e5 100%)',
+    bg: 'radial-gradient(120% 120% at 18% 22%, #6E9BB0 0%, #4B7286 50%, #2C4655 100%)',
     accentColor: '#FFD700',
   },
 ];
@@ -68,7 +68,7 @@ export default function HeroCarousel(){
               <div className="mt-4 flex flex-wrap gap-2 sm:gap-3">
                 <a href={sl.ctaHref}
                   className="px-5 sm:px-6 py-2 sm:py-2.5 font-semibold rounded-full text-sm btn-press"
-                  style={{background:sl.accentColor,color:sl.bg.includes('#FF4D00')&&i===1?'#fff':'#1a1a2e'}}>
+                  style={{background:sl.accentColor,color:i===1?'#7A2412':'#231A15'}}>
                   {sl.cta} →
                 </a>
                 <a href={sl.cta2Href}
@@ -93,7 +93,7 @@ export default function HeroCarousel(){
                   className={`${pi===0?'row-span-2':''} rounded-xl overflow-hidden block`}
                   style={{height:pi===0?'100%':'auto'}}>
                   <img src={p.image} alt={p.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain p-2 bg-white/90 hover:scale-105 transition-transform duration-500"
                     loading="lazy"/>
                 </a>
               ))}
@@ -101,12 +101,13 @@ export default function HeroCarousel(){
           </div>
         ))}
         {/* Arrows */}
-        <button className="hero-arrow hero-arrow-l" onClick={()=>{go(idx-1);reset();}}>‹</button>
-        <button className="hero-arrow hero-arrow-r" onClick={()=>{go(idx+1);reset();}}>›</button>
+        <button className="hero-arrow hero-arrow-l" aria-label="Previous slide" onClick={()=>{go(idx-1);reset();}}>‹</button>
+        <button className="hero-arrow hero-arrow-r" aria-label="Next slide" onClick={()=>{go(idx+1);reset();}}>›</button>
         {/* Dots */}
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
           {SLIDES.map((_,i)=>(
             <button key={i} className={`hero-dot ${i===idx?'hd-active':''}`}
+              aria-label={`Go to slide ${i+1} of ${SLIDES.length}`} aria-current={i===idx}
               onClick={()=>{go(i);reset();}}/>
           ))}
         </div>

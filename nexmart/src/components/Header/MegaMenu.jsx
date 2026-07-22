@@ -1,37 +1,25 @@
 import { useState, useRef } from 'react';
-import { useProducts } from '../../hooks/useProducts';
+import { useProducts, useCategories } from '../../hooks/useProducts';
+import { formatPrice } from '../../utils/currency';
+import { useStore } from '../../context/AppContext';
 import CurrencyDropdown from './CurrencyDropdown';
 
-const MEGA_DATA = [
-  {
-    cat:'Electronics', icon:'💻',
-    subs:['Laptops & Computers','Smartphones','Audio & Headphones','Cameras','Smart Home','Wearables'],
-    promoTitle:'Tech Deals', promoSub:'Up to 30% off top tech', promoCta:'Shop Electronics',
-  },
-  {
-    cat:'Fashion', icon:'👗',
-    subs:["Women's Clothing","Men's Clothing",'Shoes & Footwear','Bags & Accessories','Jewelry','Watches'],
-    promoTitle:'Style Season', promoSub:'New arrivals every day', promoCta:'Shop Fashion',
-  },
-  {
-    cat:'Home & Living', icon:'🏠',
-    subs:['Furniture','Kitchen & Dining','Bedding & Bath','Home Décor','Lighting','Storage'],
-    promoTitle:'Home Refresh', promoSub:'Fresh looks, great prices', promoCta:'Shop Home',
-  },
-  {
-    cat:'Beauty', icon:'✨',
-    subs:['Skincare','Makeup','Hair Care','Fragrance','Wellness','Tools & Devices'],
-    promoTitle:'Glow Up', promoSub:'Top beauty picks curated for you', promoCta:'Shop Beauty',
-  },
-  {
-    cat:'Sports', icon:'🏃',
-    subs:['Running & Training','Outdoor & Hiking','Yoga & Fitness','Team Sports','Water Sports','Cycling'],
-    promoTitle:'Performance Gear', promoSub:'For every athlete', promoCta:'Shop Sports',
-  },
+// Emoji per category, matched loosely by keyword. Anything unmapped falls back
+// to a neutral mark rather than showing the wrong picture.
+const ICONS = [
+  [/phone|mobile|tablet/i, '📱'], [/laptop|computer/i, '💻'],
+  [/watch/i, '⌚'], [/shoe|sneaker/i, '👟'], [/shirt|top|dress|cloth/i, '👕'],
+  [/bag|handbag/i, '👜'], [/jewel|ring/i, '💍'], [/sunglass|glass/i, '🕶'],
+  [/fragrance|perfume/i, '🌸'], [/beauty|skin|care/i, '✨'],
+  [/furniture|home|decor/i, '🛋'], [/kitchen/i, '🍳'], [/grocer|food/i, '🥑'],
+  [/motorcycle|vehicle|car/i, '🏍'], [/sport/i, '🏅'],
 ];
+const iconFor = (name) => (ICONS.find(([re]) => re.test(name)) || [null, '🔎'])[1];
 
 export default function MegaMenu(){
   const PRODUCTS=useProducts();
+  const cats=useCategories(8);
+  const{currency}=useStore();
   const[active,setActive]=useState(null);
   const timerRef=useRef(null);
   const urlCat=window.location.hash.includes('category=')
@@ -46,50 +34,49 @@ export default function MegaMenu(){
         className={`mega-menu-item ${(!urlCat||urlCat==='All')?'mm-active':''}`}>
         All
       </a>
-      {MEGA_DATA.map(m=>{
-        const featProds=PRODUCTS.filter(p=>p.category===m.cat).slice(0,3);
-        const isAct=urlCat===m.cat;
+      {cats.map(c=>{
+        const featProds=PRODUCTS.filter(p=>p.category===c.name).slice(0,3);
+        const isAct=urlCat===c.name;
         return(
-          <div key={m.cat} className="relative h-full flex items-center"
-            onMouseEnter={()=>show(m.cat)} onMouseLeave={hide}>
-            <a href={`#/shop?category=${encodeURIComponent(m.cat)}`}
+          <div key={c.name} className="relative h-full flex items-center"
+            onMouseEnter={()=>show(c.name)} onMouseLeave={hide}>
+            <a href={`#/shop?category=${encodeURIComponent(c.name)}`}
               className={`mega-menu-item ${isAct?'mm-active':''}`}>
-              {m.icon} {m.cat}
+              <span aria-hidden="true">{iconFor(c.name)}</span> {c.name}
             </a>
-            {active===m.cat&&(
+            {active===c.name&&featProds.length>0&&(
               <div className="mega-dropdown"
                 onMouseEnter={()=>clearTimeout(timerRef.current)} onMouseLeave={hide}>
-                {/* Column 1: Sub-categories */}
                 <div className="mega-col-subs">
                   <p className="text-[10px] font-bold dm-text-muted uppercase tracking-wider mb-2 px-2">Browse</p>
-                  {m.subs.map(s=>(
-                    <a key={s} href={`#/shop?category=${encodeURIComponent(m.cat)}`} className="mega-sub-link">
-                      {s}
-                    </a>
-                  ))}
+                  <a href={`#/shop?category=${encodeURIComponent(c.name)}`} className="mega-sub-link">
+                    All {c.name} <span className="dm-text-muted">({c.count})</span>
+                  </a>
+                  <a href={`#/shop?category=${encodeURIComponent(c.name)}`} className="mega-sub-link">Best rated</a>
+                  <a href={`#/shop?category=${encodeURIComponent(c.name)}`} className="mega-sub-link">On sale</a>
                 </div>
-                {/* Column 2: Featured Products */}
                 <div className="mega-col-products">
                   <p className="text-[10px] font-bold dm-text-muted uppercase tracking-wider mb-1">Featured</p>
                   {featProds.map(p=>(
                     <a key={p.id} href={`#/product/${p.id}`} className="mega-prod-item">
-                      <img src={p.image} alt={p.name}/>
+                      <img src={p.image} alt={p.name} loading="lazy"/>
                       <div className="min-w-0">
                         <p className="text-xs font-semibold dm-text truncate leading-snug">{p.name}</p>
-                        <p className="text-xs font-bold text-accent mt-0.5">${p.price}</p>
+                        <p className="text-xs font-bold text-accent mt-0.5">{formatPrice(p.price,currency)}</p>
                       </div>
                     </a>
                   ))}
                 </div>
-                {/* Column 3: Promo Banner */}
                 <div className="mega-col-promo">
                   <div>
-                    <p className="text-[10px] font-bold uppercase tracking-wider opacity-75">{m.promoTitle}</p>
-                    <p className="text-base font-bold font-heading mt-1 leading-snug">{m.promoSub}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider opacity-75">{c.name}</p>
+                    <p className="text-base font-bold font-heading mt-1 leading-snug">
+                      {c.count} {c.count===1?'product':'products'} in stock
+                    </p>
                   </div>
-                  <a href={`#/shop?category=${encodeURIComponent(m.cat)}`}
-                    className="mt-3 inline-flex items-center gap-1 px-4 py-2 bg-white text-[#FF4D00] text-xs font-bold rounded-full hover:bg-white/90 transition-all self-start">
-                    {m.promoCta} →
+                  <a href={`#/shop?category=${encodeURIComponent(c.name)}`}
+                    className="mt-3 inline-flex items-center gap-1 px-4 py-2 bg-white text-accent text-xs font-bold rounded-full hover:bg-white/90 transition-all self-start">
+                    Shop {c.name} →
                   </a>
                 </div>
               </div>

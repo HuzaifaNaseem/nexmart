@@ -33,6 +33,33 @@ export const Ic={
   PieChart:({s=18})=><svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>,
 };
 
+/**
+ * Gradient/3D icon container. Gives the flat line icons dimension without
+ * replacing them, so the whole set stays visually consistent.
+ *
+ * `tone` picks the gradient; `size` keeps tiles on a single scale.
+ */
+export const IconTile=({children,tone='accent',size='md',className='',...rest})=>{
+  const sizes={sm:'w-9 h-9 rounded-xl',md:'w-12 h-12 rounded-2xl',lg:'w-16 h-16 rounded-[20px]'};
+  return(
+    <span className={`icon-tile icon-tile-${tone} ${sizes[size]||sizes.md} ${className}`} {...rest}>
+      {children}
+    </span>
+  );
+};
+
+/**
+ * Icon + label pairing. The brief is explicit that an icon should never stand
+ * alone; `hideLabelOn` lets tight layouts hide the text visually while the
+ * accessible name is always present.
+ */
+export const IconLabel=({icon,label,hideLabelOn='',vertical=false,className=''})=>(
+  <span className={`inline-flex ${vertical?'flex-col':'flex-row'} items-center gap-1.5 ${className}`}>
+    <span aria-hidden="true" className="shrink-0">{icon}</span>
+    <span className={hideLabelOn?`${hideLabelOn} whitespace-nowrap`:'whitespace-nowrap'}>{label}</span>
+  </span>
+);
+
 export const Stars=({rating,s=14,showCount=false,count=0})=>{
   const arr=[];
   for(let i=1;i<=5;i++){

@@ -1,15 +1,14 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useStore } from '../../context/AppContext';
 import { Ic } from '../../components/icons';
-import { fetchProducts } from '../../api/products';
-import { adaptProducts } from '../../utils/productAdapter';
+import { useProductsWithStatus } from '../../hooks/useProducts';
 import { formatPrice } from '../../utils/currency';
 import { SkeletonCard, SkeletonListCard } from '../../components/ui/Skeleton';
 import { Stars } from '../../components/icons';
 import PCard from '../../components/PCard';
 import ShopSidebar from '../../components/ShopSidebar';
 
-const MIN_PRICE=0;const MAX_PRICE=2000;
+const MIN_PRICE=0;const MAX_PRICE=Infinity; // upper bound comes from the catalogue
 
 const SORT_OPTS=[
   {v:'featured',l:'Featured'},
@@ -36,6 +35,7 @@ export default function ShopPage(){
   const[sort,setSort]=useState('featured');
   const[view,setView]=useState('grid');
   const[showF,setShowF]=useState(false);
+  const{products:allProducts,loading:catalogLoading}=useProductsWithStatus();
   const[loading,setLoading]=useState(true);
 
   const[savedSearches,setSavedSearches]=useState(()=>{try{return JSON.parse(localStorage.getItem('nexmart_searches')||'[]')}catch{return[]}});
@@ -43,14 +43,8 @@ export default function ShopPage(){
   const savedRef=useRef(null);
   const[visibleCount,setVisibleCount]=useState(20);
   const sentinelRef=useRef(null);
-  const[allProducts,setAllProducts]=useState([]);
 
-  useEffect(()=>{
-    fetchProducts({limit:100})
-      .then(d=>{ setAllProducts(adaptProducts(d?.items||[])); setLoading(false); })
-      .catch(()=>setLoading(false));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[]);
+  useEffect(()=>{setLoading(catalogLoading)},[catalogLoading]);
 
   useEffect(()=>{if(urlCat&&urlCat!=='All')setSelCats([urlCat]);else setSelCats([])},[urlCat]);
   useEffect(()=>{setLoading(true);const t=setTimeout(()=>setLoading(false),600);return()=>clearTimeout(t)},[selCats,priceRange,ratingF,selBrands,filterColor,filterInStock,filterOnSale,sort]);
@@ -62,10 +56,14 @@ export default function ShopPage(){
     document.addEventListener('mousedown',h);return()=>document.removeEventListener('mousedown',h);
   },[showSaved]);
 
+  // Highest price in the live catalogue — the price filter is only "active"
+  // when the user has narrowed it below this, never by default.
+  const catalogMax=useMemo(()=>allProducts.reduce((m,p)=>Math.max(m,p.price),0)||Infinity,[allProducts]);
+
   const filtered=useMemo(()=>{
     let r=[...allProducts];
     if(selCats.length)r=r.filter(p=>selCats.includes(p.category));
-    if(priceRange[0]>MIN_PRICE||priceRange[1]<MAX_PRICE)r=r.filter(p=>p.price>=priceRange[0]&&p.price<=priceRange[1]);
+    if(priceRange[0]>MIN_PRICE||priceRange[1]<catalogMax)r=r.filter(p=>p.price>=priceRange[0]&&p.price<=priceRange[1]);
     if(ratingF>0)r=r.filter(p=>p.rating>=ratingF);
     if(selBrands.length)r=r.filter(p=>selBrands.includes(p.brand));
     if(filterColor)r=r.filter(p=>p.colors&&p.colors.some(c=>c.toLowerCase().includes(filterColor.toLowerCase())||filterColor.toLowerCase().includes(c.toLowerCase())));
@@ -99,7 +97,7 @@ export default function ShopPage(){
     ...(filterInStock?[{l:'In Stock Only',rm:()=>setFilterInStock(false)}]:[]),
     ...(filterOnSale?[{l:'On Sale',rm:()=>setFilterOnSale(false)}]:[]),
     ...(ratingF>0?[{l:`≥${ratingF}★`,rm:()=>setRatingF(0)}]:[]),
-    ...(priceRange[0]>MIN_PRICE||priceRange[1]<MAX_PRICE?[{l:`$${priceRange[0]}–$${priceRange[1]}`,rm:()=>setPriceRange([MIN_PRICE,MAX_PRICE])}]:[]),
+    ...(priceRange[0]>MIN_PRICE||priceRange[1]<catalogMax?[{l:`$${priceRange[0]}–$${Number.isFinite(priceRange[1])?priceRange[1]:catalogMax}`,rm:()=>setPriceRange([MIN_PRICE,MAX_PRICE])}]:[]),
     ...selBrands.map(b=>({l:`Brand: ${b}`,rm:()=>setSelBrands(p=>p.filter(x=>x!==b))})),
   ];
 

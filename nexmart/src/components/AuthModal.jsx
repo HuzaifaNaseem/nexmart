@@ -4,6 +4,7 @@ import { useToast } from '../context/ToastContext';
 import { getPasswordStrength, avatarColorFromEmail, getInitials } from '../utils/auth';
 import { login as apiLogin, register as apiRegister, getMe } from '../api/auth';
 import { setTokens } from '../api/client';
+import PasswordRules from './PasswordRules';
 
 export default function AuthModal() {
   const { authModal, setAuthModal, user, authRedirect, setAuthRedirect, loginUser } = useContext(AppCtx);
@@ -170,13 +171,14 @@ export default function AuthModal() {
 
               <form onSubmit={handleLogin}>
                 <div className="auth-field">
-                  <label className="dm-text-muted">Email</label>
-                  <input type="email" value={loginEmail} onChange={e=>setLoginEmail(e.target.value)} placeholder="you@example.com" className="dm-input border dm-border" autoFocus/>
+                  <label className="dm-text-muted" htmlFor="login-email">Email</label>
+                  <input id="login-email" name="email" autoComplete="email" type="email" value={loginEmail} onChange={e=>setLoginEmail(e.target.value)} placeholder="you@example.com" className="dm-input border dm-border" autoFocus/>
                 </div>
                 <div className="auth-field">
-                  <label className="dm-text-muted">Password</label>
-                  <input type={showLoginPwd?'text':'password'} value={loginPassword} onChange={e=>setLoginPassword(e.target.value)} placeholder="Enter your password" className="dm-input border dm-border pr-12"/>
-                  <span className="field-icon" onClick={()=>setShowLoginPwd(p=>!p)}>{showLoginPwd?'🙈':'👁️'}</span>
+                  <label className="dm-text-muted" htmlFor="login-password">Password</label>
+                  <input id="login-password" name="password" autoComplete="current-password" type={showLoginPwd?'text':'password'} value={loginPassword} onChange={e=>setLoginPassword(e.target.value)} className="dm-input border dm-border pr-12"/>
+                  <button type="button" className="field-icon" onClick={()=>setShowLoginPwd(p=>!p)}
+                    aria-label={showLoginPwd?'Hide password':'Show password'}>{showLoginPwd?'🙈':'👁️'}</button>
                 </div>
                 <div className="flex items-center justify-between mb-6">
                   <label className="auth-checkbox dm-text-muted">
@@ -221,29 +223,35 @@ export default function AuthModal() {
 
               <form onSubmit={handleRegister}>
                 <div className="auth-field">
-                  <label className="dm-text-muted">Full Name</label>
-                  <input type="text" value={regName} onChange={e=>setRegName(e.target.value)} placeholder="John Doe" className="dm-input border dm-border" autoFocus/>
+                  <label className="dm-text-muted" htmlFor="reg-name">Full Name</label>
+                  <input id="reg-name" name="name" autoComplete="name" type="text" value={regName} onChange={e=>setRegName(e.target.value)} placeholder="John Doe" className="dm-input border dm-border" autoFocus/>
                 </div>
                 <div className="auth-field">
-                  <label className="dm-text-muted">Email</label>
-                  <input type="email" value={regEmail} onChange={e=>setRegEmail(e.target.value)} placeholder="you@example.com" className="dm-input border dm-border"/>
+                  <label className="dm-text-muted" htmlFor="reg-email">Email</label>
+                  <input id="reg-email" name="email" autoComplete="email" type="email" value={regEmail} onChange={e=>setRegEmail(e.target.value)} placeholder="you@example.com" className="dm-input border dm-border"/>
                 </div>
                 <div className="auth-field">
-                  <label className="dm-text-muted">Password</label>
-                  <input type={showRegPwd?'text':'password'} value={regPassword} onChange={e=>setRegPassword(e.target.value)} placeholder="Min 8 characters" className="dm-input border dm-border pr-12"/>
-                  <span className="field-icon" onClick={()=>setShowRegPwd(p=>!p)}>{showRegPwd?'🙈':'👁️'}</span>
+                  <label className="dm-text-muted" htmlFor="reg-password">Password</label>
+                  <input id="reg-password" name="new-password" autoComplete="new-password" aria-describedby="reg-password-rules"
+                    type={showRegPwd?'text':'password'} value={regPassword} onChange={e=>setRegPassword(e.target.value)} className="dm-input border dm-border pr-12"/>
+                  <button type="button" className="field-icon" onClick={()=>setShowRegPwd(p=>!p)}
+                    aria-label={showRegPwd?'Hide password':'Show password'}>{showRegPwd?'🙈':'👁️'}</button>
                   {regPassword && (
                     <div>
                       <div className="pwd-strength dm-surface"><div className={`pwd-strength-fill ${pwdStrength.cls}`}/></div>
-                      <p className="text-xs font-semibold mt-1" style={{color:pwdStrength.color}}>{pwdStrength.label}</p>
                     </div>
                   )}
+                  {/* Requirements are visible from the start, not after a failed submit. */}
+                  <PasswordRules value={regPassword} id="reg-password-rules"/>
                 </div>
                 <div className="auth-field relative">
-                  <label className="dm-text-muted">Confirm Password</label>
-                  <input type="password" value={regConfirm} onChange={e=>setRegConfirm(e.target.value)} placeholder="Re-enter password" className="dm-input border dm-border pr-12"/>
+                  <label className="dm-text-muted" htmlFor="reg-confirm">Confirm Password</label>
+                  <input id="reg-confirm" name="confirm-password" autoComplete="new-password" type="password" value={regConfirm} onChange={e=>setRegConfirm(e.target.value)} className="dm-input border dm-border pr-12"/>
                   {regConfirm && regPassword && (
-                    <span className="absolute right-4 bottom-3 text-sm">{regConfirm===regPassword?'✅':'❌'}</span>
+                    <span className="absolute right-4 bottom-3 text-sm" aria-hidden="true">{regConfirm===regPassword?'✅':'❌'}</span>
+                  )}
+                  {regConfirm && regPassword && regConfirm!==regPassword && (
+                    <p className="text-[11px] text-red-500 mt-1">Passwords don't match yet</p>
                   )}
                 </div>
                 <label className="auth-checkbox dm-text-muted mb-6 block">

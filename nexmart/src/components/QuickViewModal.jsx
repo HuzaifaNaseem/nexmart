@@ -46,12 +46,12 @@ export default function QuickViewModal({product,onClose}){
           {/* Image Gallery */}
           <div className="p-4 md:p-6">
             <div className="aspect-square rounded-xl overflow-hidden dm-surface mb-3">
-              <img src={p.images[mainImg]} alt={p.name} className="w-full h-full object-cover transition-all duration-300"/>
+              <img src={p.images[mainImg]} alt={p.name} className="w-full h-full object-contain p-5 transition-all duration-300"/>
             </div>
             <div className="flex gap-2">
               {p.images.map((img,i)=>(
                 <button key={i} onClick={()=>setMainImg(i)} className={`w-14 h-14 sm:w-16 sm:h-16 rounded-lg overflow-hidden border-2 transition-all shrink-0 ${mainImg===i?'border-accent ring-1 ring-accent/30':'border-transparent hover:border-gray-300'}`}>
-                  <img src={img} alt="" className="w-full h-full object-cover"/>
+                  <img src={img} alt="" loading="lazy" className="w-full h-full object-contain p-1.5"/>
                 </button>
               ))}
             </div>

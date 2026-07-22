@@ -13,7 +13,7 @@ export default function CartPage(){
         <div className="lg:col-span-2 space-y-3">
           {st.cart.map((it,idx)=>(
             <div key={idx} className="flex gap-4 p-4 dm-card rounded-xl border dm-border">
-              <img src={it.image} alt="" className="w-20 h-20 object-cover rounded-xl"/>
+              <img src={it.image} alt="" className="w-20 h-20 object-contain p-1 dm-surface rounded-xl"/>
               <div className="flex-1 min-w-0"><h3 className="font-semibold dm-text">{it.name}</h3><p className="text-xs dm-text-muted">{[it.color,it.size].filter(Boolean).join(' · ')}</p><p className="text-lg font-bold mt-1 dm-text">{formatPrice(it.price,currency)}</p></div>
               <div className="flex flex-col items-end justify-between gap-2">
                 <p className="text-sm font-semibold dm-text">{formatPrice(it.price*it.qty,currency)}</p>
