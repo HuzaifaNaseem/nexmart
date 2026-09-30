@@ -38,6 +38,16 @@ export default function SuccessPage(){
   const newTier=getTier(points+(ptsEarned||0));
   const tierUpgrade=newTier.name!==prevTier.name;
 
+  if(params.get('demo')==='1') return (
+    <div className="max-w-2xl mx-auto px-4 py-20 text-center anim-fadeIn">
+      <div className="text-5xl mb-5" aria-hidden="true">✓</div>
+      <h1 className="font-heading text-3xl font-bold dm-text">Demo checkout complete</h1>
+      <p className="mt-4 dm-text-sec leading-relaxed">You explored the full shopping flow. No payment was made, no real order was created, and no items will ship.</p>
+      <p className="mt-5 text-sm dm-text-muted">Demo reference: {orderNum}</p>
+      <a href="#/shop" className="inline-flex mt-8 px-7 py-3 bg-accent text-white font-semibold rounded-lg">Continue exploring ↗</a>
+    </div>
+  );
+
   return(
     <div className="max-w-2xl mx-auto px-4 py-16 text-center anim-fadeIn relative">
 

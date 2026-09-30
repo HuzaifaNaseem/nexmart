@@ -42,7 +42,7 @@ export default function MegaMenu(){
             onMouseEnter={()=>show(c.name)} onMouseLeave={hide}>
             <a href={`#/shop?category=${encodeURIComponent(c.name)}`}
               className={`mega-menu-item ${isAct?'mm-active':''}`}>
-              <span aria-hidden="true">{iconFor(c.name)}</span> {c.name}
+              {c.name}
             </a>
             {active===c.name&&featProds.length>0&&(
               <div className="mega-dropdown"

@@ -1,0 +1,2006 @@
+[
+  {
+    "name": "MacBook Pro 16\" M3 Max",
+    "description": "Apple's most powerful laptop with the M3 Max chip delivers exceptional performance for pro workflows. The Liquid Retina XDR display with 120Hz ProMotion makes every pixel stunning. Perfect for video editing, 3D rendering, and software development.",
+    "price": 2499.99,
+    "original_price": 2799.99,
+    "stock": 45,
+    "category": "Electronics",
+    "brand": "Apple",
+    "images": [
+      "/catalog/macbook-hero.webp",
+      "/catalog/macbook-m3max.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "Hot Deal",
+      "color:Space Gray",
+      "color:Silver"
+    ],
+    "rating": 4.9,
+    "review_count": 312,
+    "id": 1,
+    "slug": "demo-1",
+    "is_active": true
+  },
+  {
+    "name": "iPhone 15 Pro Max",
+    "description": "The iPhone 15 Pro Max features a titanium design and the powerful A17 Pro chip. The 48MP main camera with 5x optical zoom captures stunning photos in any lighting. USB-C with USB 3 speeds makes data transfer lightning fast.",
+    "price": 1199.99,
+    "original_price": null,
+    "stock": 120,
+    "category": "Electronics",
+    "brand": "Apple",
+    "images": [
+      "/catalog/iphone-colors.webp",
+      "/catalog/iphone-hero.webp",
+      "/catalog/iphone-camera.webp"
+    ],
+    "tags": [
+      "New Arrival",
+      "Trending",
+      "color:Natural Titanium",
+      "color:Black Titanium",
+      "color:White Titanium"
+    ],
+    "rating": 4.8,
+    "review_count": 541,
+    "id": 2,
+    "slug": "demo-2",
+    "is_active": true
+  },
+  {
+    "name": "Sony WH-1000XM5 Headphones",
+    "description": "Industry-leading noise cancellation with eight microphones and two processors eliminates noise for extraordinary listening. Up to 30-hour battery life with quick charging gets you 3 hours of playback in just 3 minutes. The lightweight design with soft fit leather provides all-day comfort.",
+    "price": 279.99,
+    "original_price": 349.99,
+    "stock": 88,
+    "category": "Electronics",
+    "brand": "Sony",
+    "images": [
+      "/catalog/legacy-3.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "Hot Deal",
+      "color:Black",
+      "color:Silver"
+    ],
+    "rating": 4.7,
+    "review_count": 892,
+    "id": 3,
+    "slug": "demo-3",
+    "is_active": true
+  },
+  {
+    "name": "Samsung 65\" 4K OLED TV",
+    "description": "Experience cinema-quality visuals with Samsung's S95C OLED panel featuring self-lit pixels for perfect blacks. The Neural Quantum Processor 4K uses AI upscaling to make every scene look its best. Dolby Atmos and Object Tracking Sound+ create an immersive surround experience.",
+    "price": 1499.99,
+    "original_price": 1999.99,
+    "stock": 22,
+    "category": "Electronics",
+    "brand": "Samsung",
+    "images": [
+      "/catalog/legacy-4.webp"
+    ],
+    "tags": [
+      "Hot Deal",
+      "Sale"
+    ],
+    "rating": 4.6,
+    "review_count": 178,
+    "id": 4,
+    "slug": "demo-4",
+    "is_active": true
+  },
+  {
+    "name": "Nike Air Max 90",
+    "description": "The iconic Air Max 90 stays true to its OG running roots with the iconic Waffle outsole, stitched overlays, and classic TPU details. Nike Air cushioning adds comfort to your journey as you move through the day. A timeless silhouette that pairs with everything.",
+    "price": 109.99,
+    "original_price": 139.99,
+    "stock": 210,
+    "category": "Clothing",
+    "brand": "Nike",
+    "images": [
+      "/catalog/legacy-5.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "Hot Deal",
+      "color:White",
+      "color:Black",
+      "color:Red",
+      "size:US 7",
+      "size:US 8",
+      "size:US 9",
+      "size:US 10",
+      "size:US 11"
+    ],
+    "rating": 4.6,
+    "review_count": 1204,
+    "id": 5,
+    "slug": "demo-5",
+    "is_active": true
+  },
+  {
+    "name": "Levi's 501 Original Jeans",
+    "description": "The original jean since 1873. The 501 Original is the jean that started it all — a straight leg that sits at the waist with a button fly. Made from heavyweight denim that gets better with age, these jeans are built to last a lifetime.",
+    "price": 79.99,
+    "original_price": null,
+    "stock": 350,
+    "category": "Clothing",
+    "brand": "Levi's",
+    "images": [
+      "/catalog/legacy-6.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "color:Dark Wash",
+      "color:Light Wash",
+      "color:Black",
+      "size:28",
+      "size:30",
+      "size:32",
+      "size:34",
+      "size:36"
+    ],
+    "rating": 4.5,
+    "review_count": 2341,
+    "id": 6,
+    "slug": "demo-6",
+    "is_active": true
+  },
+  {
+    "name": "Patagonia Better Sweater Fleece",
+    "description": "A cozy fleece jacket with a sweater-like appearance made from 100% recycled polyester. The Patagonia Better Sweater features a full-zip design with a shawl collar and zippered hand pockets. Fair Trade Certified sewn, it's good for you and good for the planet.",
+    "price": 119.0,
+    "original_price": 149.0,
+    "stock": 95,
+    "category": "Clothing",
+    "brand": "Patagonia",
+    "images": [
+      "/catalog/legacy-7.webp"
+    ],
+    "tags": [
+      "Sale",
+      "color:Navy",
+      "color:Black",
+      "color:Forest Green",
+      "size:XS",
+      "size:S",
+      "size:M",
+      "size:L",
+      "size:XL"
+    ],
+    "rating": 4.8,
+    "review_count": 567,
+    "id": 7,
+    "slug": "demo-7",
+    "is_active": true
+  },
+  {
+    "name": "Ray-Ban Aviator Classic",
+    "description": "An American icon worn by military pilots since 1937, the Aviator Classic features teardrop-shaped lenses in a lightweight metal frame. Crystal lenses provide unparalleled optical clarity and 100% UV protection. Timeless style that complements every face shape.",
+    "price": 163.0,
+    "original_price": null,
+    "stock": 145,
+    "category": "Clothing",
+    "brand": "Ray-Ban",
+    "images": [
+      "/catalog/legacy-8.webp"
+    ],
+    "tags": [
+      "Trending",
+      "color:Gold",
+      "color:Silver",
+      "color:Gunmetal"
+    ],
+    "rating": 4.7,
+    "review_count": 423,
+    "id": 8,
+    "slug": "demo-8",
+    "is_active": true
+  },
+  {
+    "name": "Herman Miller Aeron Chair",
+    "description": "The Aeron Chair redefined ergonomic seating with its PostureFit SL back support and 8Z Pellicle suspension. Three sizes fit a vast range of body types and work styles. Tilt limiter and seat angle allow you to calibrate recline for different tasks throughout the day.",
+    "price": 1395.0,
+    "original_price": 1695.0,
+    "stock": 18,
+    "category": "Furniture",
+    "brand": "Herman Miller",
+    "images": [
+      "/catalog/legacy-9.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "Hot Deal",
+      "color:Graphite",
+      "color:Black"
+    ],
+    "rating": 4.9,
+    "review_count": 731,
+    "id": 9,
+    "slug": "demo-9",
+    "is_active": true
+  },
+  {
+    "name": "IKEA KALLAX Shelf Unit",
+    "description": "A versatile shelf unit that works as a room divider, storage solution, or display case. The 4x4 grid design fits 13\" vinyl records perfectly. Compatible with a wide range of KALLAX inserts for customizable storage.",
+    "price": 119.99,
+    "original_price": null,
+    "stock": 67,
+    "category": "Furniture",
+    "brand": "IKEA",
+    "images": [
+      "/catalog/legacy-10.webp"
+    ],
+    "tags": [
+      "color:White",
+      "color:Black-Brown",
+      "color:Oak Effect"
+    ],
+    "rating": 4.4,
+    "review_count": 3210,
+    "id": 10,
+    "slug": "demo-10",
+    "is_active": true
+  },
+  {
+    "name": "Casper Original Foam Mattress",
+    "description": "Casper's best-selling mattress features four layers of premium foam engineered for cool, comfortable sleep. Zoned Support gently cradles your hips while firming up under your back. The breathable cover wicks away heat so you sleep cool all night.",
+    "price": 895.0,
+    "original_price": 1095.0,
+    "stock": 40,
+    "category": "Furniture",
+    "brand": "Casper",
+    "images": [
+      "/catalog/legacy-11.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "Sale"
+    ],
+    "rating": 4.6,
+    "review_count": 892,
+    "id": 11,
+    "slug": "demo-11",
+    "is_active": true
+  },
+  {
+    "name": "Wilson Pro Staff 97 Tennis Racket",
+    "description": "The Pro Staff 97 is a player's racket for serious competitors demanding precision and feel. The Braided Graphite construction delivers exceptional feel and stability on every shot. Used by legends of the game, this is where performance meets craftsmanship.",
+    "price": 229.0,
+    "original_price": 269.0,
+    "stock": 55,
+    "category": "Sports",
+    "brand": "Wilson",
+    "images": [
+      "https://images.unsplash.com/photo-1617083934555-ac7d4fee8909?w=1200&q=85",
+      "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&q=85"
+    ],
+    "tags": [
+      "Hot Deal",
+      "color:Black"
+    ],
+    "rating": 4.7,
+    "review_count": 312,
+    "id": 12,
+    "slug": "demo-12",
+    "is_active": true
+  },
+  {
+    "name": "Yeti Rambler 36oz Bottle",
+    "description": "The YETI Rambler 36 oz Bottle is built for serious hydration. The double-wall vacuum insulation keeps drinks cold for 24 hours or hot for 12. The 18/8 stainless steel construction won't pick up flavors and resists dents and rust.",
+    "price": 50.0,
+    "original_price": null,
+    "stock": 320,
+    "category": "Sports",
+    "brand": "Yeti",
+    "images": [
+      "/catalog/legacy-13.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "color:White",
+      "color:Navy",
+      "color:Black",
+      "color:Seafoam"
+    ],
+    "rating": 4.8,
+    "review_count": 2156,
+    "id": 13,
+    "slug": "demo-13",
+    "is_active": true
+  },
+  {
+    "name": "Garmin Fenix 7X Pro Sapphire",
+    "description": "A rugged GPS smartwatch built for serious athletes and outdoor adventurers. Solar charging extends battery life up to 37 days in smartwatch mode. Advanced training metrics including HRV status and training readiness help you perform at your best.",
+    "price": 749.99,
+    "original_price": 899.99,
+    "stock": 33,
+    "category": "Sports",
+    "brand": "Garmin",
+    "images": [
+      "/catalog/legacy-14.webp"
+    ],
+    "tags": [
+      "Hot Deal",
+      "Sale",
+      "color:Carbon Gray",
+      "color:Silver"
+    ],
+    "rating": 4.8,
+    "review_count": 478,
+    "id": 14,
+    "slug": "demo-14",
+    "is_active": true
+  },
+  {
+    "name": "Atomic Habits",
+    "description": "James Clear's #1 New York Times bestseller reveals how tiny changes can produce remarkable results. Learn the proven framework for improving every day by just 1%. Over 15 million copies sold worldwide.",
+    "price": 14.99,
+    "original_price": 18.99,
+    "stock": 500,
+    "category": "Books",
+    "brand": "Avery",
+    "images": [
+      "https://covers.openlibrary.org/b/id/12539702-L.jpg?default=false"
+    ],
+    "tags": [
+      "Best Seller",
+      "Trending"
+    ],
+    "rating": 4.9,
+    "review_count": 8921,
+    "id": 15,
+    "slug": "demo-15",
+    "is_active": true
+  },
+  {
+    "name": "Dune",
+    "description": "Frank Herbert's science-fiction classic follows Paul Atreides into the complex politics and stark beauty of Arrakis. An enduring story of power, ecology, and destiny.",
+    "price": 34.99,
+    "original_price": null,
+    "stock": 180,
+    "category": "Books",
+    "brand": "Ace Books",
+    "images": [
+      "https://covers.openlibrary.org/b/id/11481354-L.jpg?default=false"
+    ],
+    "tags": [
+      "New Arrival",
+      "Trending"
+    ],
+    "rating": 4.8,
+    "review_count": 1243,
+    "id": 16,
+    "slug": "demo-16",
+    "is_active": true
+  },
+  {
+    "name": "Clean Code by Robert Martin",
+    "description": "A Handbook of Agile Software Craftsmanship. In this book Robert C. Martin presents a revolutionary paradigm with Clean Code, a handbook of agile software craftsmanship. You will learn the principles, patterns, practices, and heuristics that make code clean.",
+    "price": 39.99,
+    "original_price": 49.99,
+    "stock": 290,
+    "category": "Books",
+    "brand": "Pearson",
+    "images": [
+      "https://covers.openlibrary.org/b/id/8065615-L.jpg?default=false"
+    ],
+    "tags": [
+      "Best Seller"
+    ],
+    "rating": 4.7,
+    "review_count": 5632,
+    "id": 17,
+    "slug": "demo-17",
+    "is_active": true
+  },
+  {
+    "name": "Dyson Airwrap Complete",
+    "description": "The Dyson Airwrap uses a phenomenon called the Coanda effect to attract and wrap hair around the barrel, with no extreme heat. Includes a full set of attachments for curling, waving, smoothing, and drying all hair types. Engineered for flyaways, frizz, and volume.",
+    "price": 549.99,
+    "original_price": 599.99,
+    "stock": 42,
+    "category": "Beauty",
+    "brand": "Dyson",
+    "images": [
+      "/catalog/legacy-18.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "Hot Deal",
+      "color:Nickel/Copper",
+      "color:Prussian Blue"
+    ],
+    "rating": 4.7,
+    "review_count": 2134,
+    "id": 18,
+    "slug": "demo-18",
+    "is_active": true
+  },
+  {
+    "name": "La Mer Moisturizing Cream",
+    "description": "La Mer's legendary Crème de la Mer is powered by the Miracle Broth, a fermented blend of sea kelp, vitamins, minerals, and lime tea. It deeply hydrates, repairs the look of damage, and soothes skin. Experience the transformation that has made it iconic worldwide.",
+    "price": 190.0,
+    "original_price": null,
+    "stock": 78,
+    "category": "Beauty",
+    "brand": "La Mer",
+    "images": [
+      "/catalog/legacy-19.webp"
+    ],
+    "tags": [
+      "Trending",
+      "Limited"
+    ],
+    "rating": 4.6,
+    "review_count": 892,
+    "id": 19,
+    "slug": "demo-19",
+    "is_active": true
+  },
+  {
+    "name": "Olaplex Hair Perfector No.3",
+    "description": "Olaplex No. 3 is a weekly at-home treatment that reduces breakage and visibly strengthens hair. Works by repairing broken disulfide bonds caused by chemical, thermal, and mechanical damage. A single bottle with just one weekly use lasts 30+ treatments.",
+    "price": 28.0,
+    "original_price": 32.0,
+    "stock": 420,
+    "category": "Beauty",
+    "brand": "Olaplex",
+    "images": [
+      "/catalog/legacy-20.webp"
+    ],
+    "tags": [
+      "Best Seller"
+    ],
+    "rating": 4.8,
+    "review_count": 7821,
+    "id": 20,
+    "slug": "demo-20",
+    "is_active": true
+  },
+  {
+    "name": "Le Creuset 5.5Qt Dutch Oven",
+    "description": "Le Creuset's iconic round Dutch oven is crafted from enameled cast iron, providing superior heat distribution and retention. The tight-fitting lid seals in moisture for perfectly moist braises and stews. Dishwasher safe and compatible with all stovetops including induction.",
+    "price": 319.95,
+    "original_price": 379.95,
+    "stock": 65,
+    "category": "Kitchen",
+    "brand": "Le Creuset",
+    "images": [
+      "/catalog/legacy-21.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "Hot Deal",
+      "color:Flame",
+      "color:Marseille",
+      "color:Cerise"
+    ],
+    "rating": 4.9,
+    "review_count": 3421,
+    "id": 21,
+    "slug": "demo-21",
+    "is_active": true
+  },
+  {
+    "name": "KitchenAid Artisan Stand Mixer",
+    "description": "The KitchenAid Artisan Series 5-Qt Stand Mixer is perfect for mixing, kneading, and whipping. The powerful 325-watt motor handles everything from thick cookie dough to delicate meringues. Choose from over 50 colors to match your kitchen aesthetic.",
+    "price": 379.99,
+    "original_price": 449.99,
+    "stock": 54,
+    "category": "Kitchen",
+    "brand": "KitchenAid",
+    "images": [
+      "/catalog/legacy-22.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "Sale",
+      "color:Empire Red",
+      "color:Onyx Black",
+      "color:Ice Blue"
+    ],
+    "rating": 4.8,
+    "review_count": 5123,
+    "id": 22,
+    "slug": "demo-22",
+    "is_active": true
+  },
+  {
+    "name": "Vitamix A3500 Ascent Blender",
+    "description": "The Vitamix A3500 is the most advanced blender in the Ascent Series. Five program settings allow you to walk away while the blender optimizes blend times. Wireless connectivity allows the machine to read container sizes and adjust speeds automatically.",
+    "price": 549.95,
+    "original_price": 649.95,
+    "stock": 36,
+    "category": "Kitchen",
+    "brand": "Vitamix",
+    "images": [
+      "/catalog/legacy-23.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "Hot Deal",
+      "color:Black",
+      "color:White"
+    ],
+    "rating": 4.8,
+    "review_count": 1893,
+    "id": 23,
+    "slug": "demo-23",
+    "is_active": true
+  },
+  {
+    "name": "Nespresso Vertuo Next Coffee Maker",
+    "description": "Brew a full range of cup sizes from a single machine. Centrifusion technology reads the barcode on each Nespresso capsule and automatically adjusts the brewing parameters for the perfect cup. Connects to Wi-Fi for automatic updates to your machine.",
+    "price": 149.0,
+    "original_price": 179.0,
+    "stock": 112,
+    "category": "Kitchen",
+    "brand": "Nespresso",
+    "images": [
+      "/catalog/legacy-24.webp"
+    ],
+    "tags": [
+      "Hot Deal",
+      "Sale",
+      "color:Black",
+      "color:White"
+    ],
+    "rating": 4.5,
+    "review_count": 4312,
+    "id": 24,
+    "slug": "demo-24",
+    "is_active": true
+  },
+  {
+    "name": "PS5 DualSense Wireless Controller",
+    "description": "Experience a new era of haptic feedback with the DualSense wireless controller. Adaptive triggers provide varying degrees of resistance to simulate the tension of drawing a bow or pressing the accelerator in a racing game. Built-in microphone and speaker for gaming on the go.",
+    "price": 64.99,
+    "original_price": null,
+    "stock": 280,
+    "category": "Gaming",
+    "brand": "Sony",
+    "images": [
+      "/catalog/legacy-25.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "color:White",
+      "color:Midnight Black",
+      "color:Cosmic Red"
+    ],
+    "rating": 4.8,
+    "review_count": 6231,
+    "id": 25,
+    "slug": "demo-25",
+    "is_active": true
+  },
+  {
+    "name": "Razer BlackWidow V4 Pro Keyboard",
+    "description": "The BlackWidow V4 Pro features Razer's finest mechanical switches with a satisfying tactile bump and audible click. The 8-zone RGB backlighting with Chroma RGB creates stunning lighting effects synced to your games. A fully programmable multi-function dial and media keys put control at your fingertips.",
+    "price": 139.99,
+    "original_price": 169.99,
+    "stock": 67,
+    "category": "Gaming",
+    "brand": "Razer",
+    "images": [
+      "/catalog/legacy-26.webp"
+    ],
+    "tags": [
+      "Hot Deal",
+      "color:Black"
+    ],
+    "rating": 4.6,
+    "review_count": 892,
+    "id": 26,
+    "slug": "demo-26",
+    "is_active": true
+  },
+  {
+    "name": "Nintendo Switch OLED Model",
+    "description": "The Nintendo Switch OLED Model features a vibrant 7-inch OLED screen with vivid colors and crisp contrast for tabletop and handheld mode. The enhanced audio and a wide adjustable stand create a better experience when playing in tabletop mode.",
+    "price": 329.99,
+    "original_price": 349.99,
+    "stock": 98,
+    "category": "Gaming",
+    "brand": "Nintendo",
+    "images": [
+      "/catalog/legacy-27.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "color:White",
+      "color:Neon Blue/Red"
+    ],
+    "rating": 4.7,
+    "review_count": 4521,
+    "id": 27,
+    "slug": "demo-27",
+    "is_active": true
+  },
+  {
+    "name": "SteelSeries Arctis Nova Pro Headset",
+    "description": "The Arctis Nova Pro Wireless features a multi-system hub that supports simultaneous connections to two systems, letting you switch between PC and PS5 instantly. The hot-swappable dual battery system means you never have to stop gaming to charge.",
+    "price": 249.99,
+    "original_price": 279.99,
+    "stock": 44,
+    "category": "Gaming",
+    "brand": "SteelSeries",
+    "images": [
+      "/catalog/legacy-28.webp"
+    ],
+    "tags": [
+      "Hot Deal",
+      "color:Black",
+      "color:White"
+    ],
+    "rating": 4.7,
+    "review_count": 1123,
+    "id": 28,
+    "slug": "demo-28",
+    "is_active": true
+  },
+  {
+    "name": "LG 27GP950-B 4K Gaming Monitor",
+    "description": "A 27-inch 4K UHD Nano IPS display with a 144Hz refresh rate and 1ms response time for smooth, responsive gaming. NVIDIA G-SYNC Compatible and AMD FreeSync Premium Pro eliminate screen tearing. DisplayHDR 600 delivers vivid HDR gaming visuals.",
+    "price": 599.99,
+    "original_price": 799.99,
+    "stock": 28,
+    "category": "Gaming",
+    "brand": "LG",
+    "images": [
+      "/catalog/legacy-29.webp"
+    ],
+    "tags": [
+      "Hot Deal",
+      "Sale",
+      "Limited"
+    ],
+    "rating": 4.8,
+    "review_count": 678,
+    "id": 29,
+    "slug": "demo-29",
+    "is_active": true
+  },
+  {
+    "name": "Logitech MX Master 3S Mouse",
+    "description": "The MX Master 3S features an 8K DPI sensor that tracks on glass and an ultra-fast MagSpeed scroll wheel that can scroll 1,000 lines per second. Connect to up to 3 devices and switch between them with one click. The ergonomic shape provides all-day comfort.",
+    "price": 94.99,
+    "original_price": 109.99,
+    "stock": 156,
+    "category": "Gaming",
+    "brand": "Logitech",
+    "images": [
+      "/catalog/legacy-30.webp"
+    ],
+    "tags": [
+      "Best Seller",
+      "Hot Deal",
+      "color:Black",
+      "color:Pale Gray"
+    ],
+    "rating": 4.9,
+    "review_count": 3892,
+    "id": 30,
+    "slug": "demo-30",
+    "is_active": true
+  },
+  {
+    "id": 1078,
+    "slug": "catalog-78",
+    "name": "Apple MacBook Pro 14 Inch Space Grey",
+    "description": "The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display.",
+    "category": "Electronics",
+    "brand": "Apple",
+    "price": 1999.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-78.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1079,
+    "slug": "catalog-79",
+    "name": "Asus Zenbook Pro Dual Screen Laptop",
+    "description": "The Asus Zenbook Pro Dual Screen Laptop is a high-performance device with dual screens, providing productivity and versatility for creative professionals.",
+    "category": "Electronics",
+    "brand": "Asus",
+    "price": 1799.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-79.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1082,
+    "slug": "catalog-82",
+    "name": "New DELL XPS 13 9300 Laptop",
+    "description": "The New DELL XPS 13 9300 Laptop is a compact and powerful device, featuring a virtually borderless InfinityEdge display and high-end performance for various tasks.",
+    "category": "Electronics",
+    "brand": "Dell",
+    "price": 1499.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-82.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1099,
+    "slug": "catalog-99",
+    "name": "Amazon Echo Plus",
+    "description": "The Amazon Echo Plus is a smart speaker with built-in Alexa voice control. It features premium sound quality and serves as a hub for controlling smart home devices.",
+    "category": "Electronics",
+    "brand": "Amazon",
+    "price": 99.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-99.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1100,
+    "slug": "catalog-100",
+    "name": "Apple Airpods",
+    "description": "The Apple Airpods offer a seamless wireless audio experience. With easy pairing, high-quality sound, and Siri integration, they are perfect for on-the-go listening.",
+    "category": "Electronics",
+    "brand": "Apple",
+    "price": 129.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-100.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1101,
+    "slug": "catalog-101",
+    "name": "Apple AirPods Max Silver",
+    "description": "The Apple AirPods Max in Silver are premium over-ear headphones with high-fidelity audio, adaptive EQ, and active noise cancellation. Experience immersive sound in style.",
+    "category": "Electronics",
+    "brand": "Apple",
+    "price": 549.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-101.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1103,
+    "slug": "catalog-103",
+    "name": "Apple HomePod Mini Cosmic Grey",
+    "description": "The Apple HomePod Mini in Cosmic Grey is a compact smart speaker that delivers impressive audio and integrates seamlessly with the Apple ecosystem for a smart home experience.",
+    "category": "Electronics",
+    "brand": "Apple",
+    "price": 99.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-103.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1123,
+    "slug": "catalog-123",
+    "name": "iPhone 13 Pro",
+    "description": "The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.",
+    "category": "Electronics",
+    "brand": "Apple",
+    "price": 1099.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-123.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1159,
+    "slug": "catalog-159",
+    "name": "iPad Mini 2021 Starlight",
+    "description": "The iPad Mini 2021 in Starlight is a compact and powerful tablet from Apple. Featuring a stunning Retina display, powerful A-series chip, and a sleek design, it offers a premium tablet experience.",
+    "category": "Electronics",
+    "brand": "Apple",
+    "price": 499.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-159.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1160,
+    "slug": "catalog-160",
+    "name": "Samsung Galaxy Tab S8 Plus Grey",
+    "description": "The Samsung Galaxy Tab S8 Plus in Grey is a high-performance Android tablet by Samsung. With a large AMOLED display, powerful processor, and S Pen support, it's ideal for productivity and entertainment.",
+    "category": "Electronics",
+    "brand": "Samsung",
+    "price": 599.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-160.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1083,
+    "slug": "catalog-83",
+    "name": "Blue & Black Check Shirt",
+    "description": "The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.",
+    "category": "Clothing",
+    "brand": "Fashion Trends",
+    "price": 29.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-83.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1088,
+    "slug": "catalog-88",
+    "name": "Nike Air Jordan 1 Red And Black",
+    "description": "The Nike Air Jordan 1 in Red and Black is an iconic basketball sneaker known for its stylish design and high-performance features, making it a favorite among sneaker enthusiasts and athletes.",
+    "category": "Clothing",
+    "brand": "Nike",
+    "price": 149.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-88.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1090,
+    "slug": "catalog-90",
+    "name": "Puma Future Rider Trainers",
+    "description": "The Puma Future Rider Trainers offer a blend of retro style and modern comfort. Perfect for casual wear, these trainers provide a fashionable and comfortable option for everyday use.",
+    "category": "Clothing",
+    "brand": "Puma",
+    "price": 89.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-90.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1162,
+    "slug": "catalog-162",
+    "name": "Blue Frock",
+    "description": "The Blue Frock is a charming and stylish dress for various occasions. With a vibrant blue color and a comfortable design, it adds a touch of elegance to your wardrobe.",
+    "category": "Clothing",
+    "brand": "Clothing",
+    "price": 29.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-162.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1163,
+    "slug": "catalog-163",
+    "name": "Girl Summer Dress",
+    "description": "The Girl Summer Dress is a cute and breezy dress designed for warm weather. With playful patterns and lightweight fabric, it's perfect for keeping cool and stylish during the summer.",
+    "category": "Clothing",
+    "brand": "Clothing",
+    "price": 19.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-163.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1172,
+    "slug": "catalog-172",
+    "name": "Blue Women's Handbag",
+    "description": "The Blue Women's Handbag is a stylish and spacious accessory for everyday use. With a vibrant blue color and multiple compartments, it combines fashion and functionality.",
+    "category": "Clothing",
+    "brand": "Fashionista",
+    "price": 49.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-172.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1174,
+    "slug": "catalog-174",
+    "name": "Prada Women Bag",
+    "description": "The Prada Women Bag is an iconic designer bag that exudes elegance and luxury. Crafted with precision and featuring the Prada logo, it's a statement piece for fashion enthusiasts.",
+    "category": "Clothing",
+    "brand": "Prada",
+    "price": 599.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-174.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1177,
+    "slug": "catalog-177",
+    "name": "Black Women's Gown",
+    "description": "The Black Women's Gown is an elegant and timeless evening gown. With a sleek black design, it's perfect for formal events and special occasions, exuding sophistication and style.",
+    "category": "Clothing",
+    "brand": "Clothing",
+    "price": 129.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-177.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1186,
+    "slug": "catalog-186",
+    "name": "Calvin Klein Heel Shoes",
+    "description": "Calvin Klein Heel Shoes are elegant and sophisticated, designed for formal occasions. With a classic design and high-quality materials, they complement your stylish ensemble.",
+    "category": "Clothing",
+    "brand": "Calvin Klein",
+    "price": 79.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-186.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1190,
+    "slug": "catalog-190",
+    "name": "IWC Ingenieur Automatic Steel",
+    "description": "The IWC Ingenieur Automatic Steel watch is a durable and sophisticated timepiece. With a stainless steel case and automatic movement, it combines precision and style for watch enthusiasts.",
+    "category": "Clothing",
+    "brand": "IWC",
+    "price": 4999.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-190.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1011,
+    "slug": "catalog-11",
+    "name": "Annibale Colombo Bed",
+    "description": "The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.",
+    "category": "Furniture",
+    "brand": "Annibale Colombo",
+    "price": 1899.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-11.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1012,
+    "slug": "catalog-12",
+    "name": "Annibale Colombo Sofa",
+    "description": "The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.",
+    "category": "Furniture",
+    "brand": "Annibale Colombo",
+    "price": 2499.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-12.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1013,
+    "slug": "catalog-13",
+    "name": "Bedside Table African Cherry",
+    "description": "The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.",
+    "category": "Furniture",
+    "brand": "Furniture Co.",
+    "price": 299.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-13.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1014,
+    "slug": "catalog-14",
+    "name": "Knoll Saarinen Executive Conference Chair",
+    "description": "The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.",
+    "category": "Furniture",
+    "brand": "Knoll",
+    "price": 499.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-14.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1015,
+    "slug": "catalog-15",
+    "name": "Wooden Bathroom Sink With Mirror",
+    "description": "The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.",
+    "category": "Furniture",
+    "brand": "Bath Trends",
+    "price": 799.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-15.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1043,
+    "slug": "catalog-43",
+    "name": "Decoration Swing",
+    "description": "The Decoration Swing is a charming addition to your home decor. Crafted with intricate details, it adds a touch of elegance and whimsy to any room.",
+    "category": "Furniture",
+    "brand": "Furniture",
+    "price": 59.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-43.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1046,
+    "slug": "catalog-46",
+    "name": "Plant Pot",
+    "description": "The Plant Pot is a stylish container for your favorite plants. With a sleek design, it complements your indoor or outdoor garden, adding a modern touch to your plant display.",
+    "category": "Furniture",
+    "brand": "Furniture",
+    "price": 14.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-46.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1047,
+    "slug": "catalog-47",
+    "name": "Table Lamp",
+    "description": "The Table Lamp is a functional and decorative lighting solution for your living space. With a modern design, it provides both ambient and task lighting, enhancing the atmosphere.",
+    "category": "Furniture",
+    "brand": "Furniture",
+    "price": 49.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-47.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1137,
+    "slug": "catalog-137",
+    "name": "American Football",
+    "description": "The American Football is a classic ball used in American football games. It is designed for throwing and catching, making it an essential piece of equipment for the sport.",
+    "category": "Sports",
+    "brand": "Sports",
+    "price": 19.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-137.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1139,
+    "slug": "catalog-139",
+    "name": "Baseball Glove",
+    "description": "The Baseball Glove is a protective glove worn by baseball players. It is designed to catch and field the baseball, providing players with comfort and control during the game.",
+    "category": "Sports",
+    "brand": "Sports",
+    "price": 24.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-139.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1140,
+    "slug": "catalog-140",
+    "name": "Basketball",
+    "description": "The Basketball is a standard ball used in basketball games. It is designed for dribbling, shooting, and passing in the game of basketball, suitable for both indoor and outdoor play.",
+    "category": "Sports",
+    "brand": "Sports",
+    "price": 14.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-140.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1143,
+    "slug": "catalog-143",
+    "name": "Cricket Bat",
+    "description": "The Cricket Bat is an essential piece of cricket equipment used by batsmen to hit the cricket ball. It is made of wood and comes in various sizes and designs.",
+    "category": "Sports",
+    "brand": "Sports",
+    "price": 29.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-143.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1147,
+    "slug": "catalog-147",
+    "name": "Football",
+    "description": "The Football, also known as a soccer ball, is the standard ball used in the sport of football (soccer). It is designed for kicking and passing in the game.",
+    "category": "Sports",
+    "brand": "Sports",
+    "price": 17.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-147.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1149,
+    "slug": "catalog-149",
+    "name": "Iron Golf",
+    "description": "The Iron Golf is a type of golf club designed for various golf shots. It features a solid metal head and is used for approach shots, chipping, and other golfing techniques.",
+    "category": "Sports",
+    "brand": "Sports",
+    "price": 49.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-149.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1151,
+    "slug": "catalog-151",
+    "name": "Tennis Ball",
+    "description": "The Tennis Ball is a standard ball used in the sport of tennis. It is designed for bouncing and hitting with tennis rackets during matches or practice sessions.",
+    "category": "Sports",
+    "brand": "Sports",
+    "price": 6.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-151.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1152,
+    "slug": "catalog-152",
+    "name": "Tennis Racket",
+    "description": "The Tennis Racket is an essential piece of equipment used in the sport of tennis. It features a frame with strings and a grip, allowing players to hit the tennis ball.",
+    "category": "Sports",
+    "brand": "Sports",
+    "price": 49.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-152.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1153,
+    "slug": "catalog-153",
+    "name": "Volleyball",
+    "description": "The Volleyball is a standard ball used in the sport of volleyball. It is designed for passing, setting, and spiking over the net during volleyball matches.",
+    "category": "Sports",
+    "brand": "Sports",
+    "price": 11.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-153.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1001,
+    "slug": "catalog-1",
+    "name": "Essence Mascara Lash Princess",
+    "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+    "category": "Beauty",
+    "brand": "Essence",
+    "price": 9.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-1.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1002,
+    "slug": "catalog-2",
+    "name": "Eyeshadow Palette with Mirror",
+    "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+    "category": "Beauty",
+    "brand": "Glamour Beauty",
+    "price": 19.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-2.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1004,
+    "slug": "catalog-4",
+    "name": "Red Lipstick",
+    "description": "The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.",
+    "category": "Beauty",
+    "brand": "Chic Cosmetics",
+    "price": 12.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-4.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1005,
+    "slug": "catalog-5",
+    "name": "Red Nail Polish",
+    "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
+    "category": "Beauty",
+    "brand": "Nail Couture",
+    "price": 8.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-5.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1006,
+    "slug": "catalog-6",
+    "name": "Calvin Klein CK One",
+    "description": "CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It's a versatile fragrance suitable for everyday wear.",
+    "category": "Beauty",
+    "brand": "Calvin Klein",
+    "price": 49.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-6.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1007,
+    "slug": "catalog-7",
+    "name": "Chanel Coco Noir Eau De",
+    "description": "Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.",
+    "category": "Beauty",
+    "brand": "Chanel",
+    "price": 129.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-7.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1008,
+    "slug": "catalog-8",
+    "name": "Dior J'adore",
+    "description": "J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.",
+    "category": "Beauty",
+    "brand": "Dior",
+    "price": 89.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-8.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1118,
+    "slug": "catalog-118",
+    "name": "Attitude Super Leaves Hand Soap",
+    "description": "Attitude Super Leaves Hand Soap is a natural and nourishing hand soap enriched with the goodness of super leaves. It cleanses and moisturizes your hands, leaving them feeling fresh and soft.",
+    "category": "Beauty",
+    "brand": "Attitude",
+    "price": 8.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-118.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1119,
+    "slug": "catalog-119",
+    "name": "Olay Ultra Moisture Shea Butter Body Wash",
+    "description": "Olay Ultra Moisture Shea Butter Body Wash is a luxurious body wash that hydrates and nourishes your skin with the moisturizing power of shea butter. Enjoy a rich lather and silky-smooth skin.",
+    "category": "Beauty",
+    "brand": "Olay",
+    "price": 12.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-119.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1120,
+    "slug": "catalog-120",
+    "name": "Vaseline Men Body and Face Lotion",
+    "description": "Vaseline Men Body and Face Lotion is a specially formulated lotion designed to provide long-lasting moisture to men's skin. It absorbs quickly and helps keep the skin hydrated and healthy.",
+    "category": "Beauty",
+    "brand": "Vaseline",
+    "price": 9.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-120.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1048,
+    "slug": "catalog-48",
+    "name": "Bamboo Spatula",
+    "description": "The Bamboo Spatula is a versatile kitchen tool made from eco-friendly bamboo. Ideal for flipping, stirring, and serving various dishes.",
+    "category": "Kitchen",
+    "brand": "Kitchen",
+    "price": 7.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-48.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1050,
+    "slug": "catalog-50",
+    "name": "Black Whisk",
+    "description": "The Black Whisk is a kitchen essential for whisking and beating ingredients. Its ergonomic handle and sleek design make it a practical and stylish tool.",
+    "category": "Kitchen",
+    "brand": "Kitchen",
+    "price": 9.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-50.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1052,
+    "slug": "catalog-52",
+    "name": "Carbon Steel Wok",
+    "description": "The Carbon Steel Wok is a versatile cooking pan suitable for stir-frying, sautéing, and deep frying. Its sturdy construction ensures even heat distribution for delicious meals.",
+    "category": "Kitchen",
+    "brand": "Kitchen",
+    "price": 29.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-52.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1053,
+    "slug": "catalog-53",
+    "name": "Chopping Board",
+    "description": "The Chopping Board is an essential kitchen accessory for food preparation. Made from durable material, it provides a safe and hygienic surface for cutting and chopping.",
+    "category": "Kitchen",
+    "brand": "Kitchen",
+    "price": 12.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-53.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1054,
+    "slug": "catalog-54",
+    "name": "Citrus Squeezer Yellow",
+    "description": "The Citrus Squeezer in Yellow is a handy tool for extracting juice from citrus fruits. Its vibrant color adds a cheerful touch to your kitchen gadgets.",
+    "category": "Kitchen",
+    "brand": "Kitchen",
+    "price": 8.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-54.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1056,
+    "slug": "catalog-56",
+    "name": "Electric Stove",
+    "description": "The Electric Stove provides a portable and efficient cooking solution. Ideal for small kitchens or as an additional cooking surface for various culinary needs.",
+    "category": "Kitchen",
+    "brand": "Kitchen",
+    "price": 49.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-56.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1061,
+    "slug": "catalog-61",
+    "name": "Hand Blender",
+    "description": "The Hand Blender is a versatile kitchen appliance for blending, pureeing, and mixing. Its compact design and powerful motor make it a convenient tool for various recipes.",
+    "category": "Kitchen",
+    "brand": "Kitchen",
+    "price": 34.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-61.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1066,
+    "slug": "catalog-66",
+    "name": "Microwave Oven",
+    "description": "The Microwave Oven is a versatile kitchen appliance for quick and efficient cooking, reheating, and defrosting. Its compact size makes it suitable for various kitchen setups.",
+    "category": "Kitchen",
+    "brand": "Kitchen",
+    "price": 89.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-66.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1073,
+    "slug": "catalog-73",
+    "name": "Spice Rack",
+    "description": "The Spice Rack is a convenient organizer for your spices and seasonings. Keep your kitchen essentials within reach and neatly arranged with this stylish spice rack.",
+    "category": "Kitchen",
+    "brand": "Kitchen",
+    "price": 19.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "/catalog/product-73.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 2001,
+    "slug": "book-1",
+    "name": "Educated",
+    "description": "Educated by Tara Westover. Discover this title in the NexMart Books collection.",
+    "category": "Books",
+    "brand": "Tara Westover",
+    "price": 17.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "https://covers.openlibrary.org/b/id/8314077-L.jpg?default=false"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 2002,
+    "slug": "book-2",
+    "name": "Nineteen Eighty-Four",
+    "description": "Nineteen Eighty-Four by George Orwell. Discover this title in the NexMart Books collection.",
+    "category": "Books",
+    "brand": "George Orwell",
+    "price": 14.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "https://covers.openlibrary.org/b/id/9267242-L.jpg?default=false"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 2003,
+    "slug": "book-3",
+    "name": "Project Hail Mary",
+    "description": "Project Hail Mary by Andy Weir. Discover this title in the NexMart Books collection.",
+    "category": "Books",
+    "brand": "Andy Weir",
+    "price": 21.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "https://covers.openlibrary.org/b/id/11200092-L.jpg?default=false"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 2004,
+    "slug": "book-4",
+    "name": "Sapiens",
+    "description": "Sapiens by Yuval Noah Harari. Discover this title in the NexMart Books collection.",
+    "category": "Books",
+    "brand": "Yuval Noah Harari",
+    "price": 19.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "https://covers.openlibrary.org/b/id/8634250-L.jpg?default=false"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 2005,
+    "slug": "book-5",
+    "name": "The Alchemist",
+    "description": "The Alchemist by Paulo Coelho. Discover this title in the NexMart Books collection.",
+    "category": "Books",
+    "brand": "Paulo Coelho",
+    "price": 15.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "https://covers.openlibrary.org/b/id/11556106-L.jpg?default=false"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 2006,
+    "slug": "book-6",
+    "name": "The Creative Act",
+    "description": "The Creative Act by Rick Rubin. Discover this title in the NexMart Books collection.",
+    "category": "Books",
+    "brand": "Rick Rubin",
+    "price": 24.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "https://covers.openlibrary.org/b/id/13316390-L.jpg?default=false"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 2007,
+    "slug": "book-7",
+    "name": "The Design of Everyday Things",
+    "description": "The Design of Everyday Things by Don Norman. Discover this title in the NexMart Books collection.",
+    "category": "Books",
+    "brand": "Don Norman",
+    "price": 22.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "https://covers.openlibrary.org/b/id/7841556-L.jpg?default=false"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 2008,
+    "slug": "book-8",
+    "name": "The Hobbit",
+    "description": "The Hobbit by J. R. R. Tolkien. Discover this title in the NexMart Books collection.",
+    "category": "Books",
+    "brand": "J. R. R. Tolkien",
+    "price": 16.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "https://covers.openlibrary.org/b/id/14627509-L.jpg?default=false"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 2009,
+    "slug": "book-9",
+    "name": "The Psychology of Money",
+    "description": "The Psychology of Money by Morgan Housel. Discover this title in the NexMart Books collection.",
+    "category": "Books",
+    "brand": "Morgan Housel",
+    "price": 18.99,
+    "original_price": null,
+    "stock": 25,
+    "images": [
+      "https://covers.openlibrary.org/b/id/10389354-L.jpg?default=false"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 3620,
+    "slug": "game-620",
+    "name": "Portal 2",
+    "description": "The &quot;Perpetual Testing Initiative&quot; has been expanded to allow you to design co-op puzzles for you and your friends!",
+    "category": "Gaming",
+    "brand": "Steam",
+    "price": 19.99,
+    "original_price": null,
+    "stock": 100,
+    "images": [
+      "/catalog/game-620.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 108600,
+    "slug": "game-105600",
+    "name": "Terraria",
+    "description": "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!",
+    "category": "Gaming",
+    "brand": "Steam",
+    "price": 9.99,
+    "original_price": null,
+    "stock": 100,
+    "images": [
+      "/catalog/game-105600.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 370520,
+    "slug": "game-367520",
+    "name": "Hollow Knight",
+    "description": "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.",
+    "category": "Gaming",
+    "brand": "Steam",
+    "price": 14.99,
+    "original_price": null,
+    "stock": 100,
+    "images": [
+      "/catalog/game-367520.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 416150,
+    "slug": "game-413150",
+    "name": "Stardew Valley",
+    "description": "Вам досталась старая дедушкина ферма в долине Стардью. С горстью монет в кармане и старыми инструментами в руках вы начинаете новую жизнь. Сможете ли вы превратить пустырь в цветущий сад?",
+    "category": "Gaming",
+    "brand": "Steam",
+    "price": 14.99,
+    "original_price": null,
+    "stock": 100,
+    "images": [
+      "/catalog/game-413150.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1094500,
+    "slug": "game-1091500",
+    "name": "Cyberpunk 2077",
+    "description": "Cyberpunk 2077 is an open-world, action-adventure RPG set in the dark future of Night City — a dangerous megalopolis obsessed with power, glamor, and ceaseless body modification.",
+    "category": "Gaming",
+    "brand": "Steam",
+    "price": 49.99,
+    "original_price": null,
+    "stock": 100,
+    "images": [
+      "/catalog/game-1091500.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1148360,
+    "slug": "game-1145360",
+    "name": "Hades",
+    "description": "Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre.",
+    "category": "Gaming",
+    "brand": "Steam",
+    "price": 24.99,
+    "original_price": null,
+    "stock": 100,
+    "images": [
+      "/catalog/game-1145360.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1248620,
+    "slug": "game-1245620",
+    "name": "ELDEN RING",
+    "description": "THE CRITICALLY ACCLAIMED FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+    "category": "Gaming",
+    "brand": "Steam",
+    "price": 59.99,
+    "original_price": null,
+    "stock": 100,
+    "images": [
+      "/catalog/game-1245620.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  },
+  {
+    "id": 1596500,
+    "slug": "game-1593500",
+    "name": "God of War",
+    "description": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
+    "category": "Gaming",
+    "brand": "Steam",
+    "price": 39.99,
+    "original_price": null,
+    "stock": 100,
+    "images": [
+      "/catalog/game-1593500.webp"
+    ],
+    "tags": [],
+    "rating": 0,
+    "review_count": 0,
+    "is_active": true
+  }
+]

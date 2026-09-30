@@ -60,7 +60,7 @@ export default function QuickViewModal({product,onClose}){
           <div className="p-4 md:p-6 md:pl-2 flex flex-col">
             <p className="text-xs text-accent font-semibold uppercase tracking-wider">{p.brand}</p>
             <h2 className="font-heading text-xl sm:text-2xl font-bold dm-text mt-1 leading-tight">{p.name}</h2>
-            <div className="mt-2"><Stars rating={p.rating} s={15} showCount count={p.reviews}/></div>
+            <div className="mt-2">{p.reviews>0?<Stars rating={p.rating} s={15} showCount count={p.reviews}/>:<span className="text-xs dm-text-muted">New to the collection</span>}</div>
             <div className="mt-3 flex items-center gap-2.5">
               <span className="text-2xl font-bold dm-text">{formatPrice(p.price,currency)}</span>
               {p.originalPrice&&<><span className="text-sm dm-text-muted line-through">{formatPrice(p.originalPrice,currency)}</span><span className="px-2 py-0.5 bg-red-100 text-red-600 text-[10px] font-bold rounded-full">-{disc}%</span></>}

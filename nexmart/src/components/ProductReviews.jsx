@@ -31,6 +31,7 @@ const RatingBar = ({ star, count, total }) => {
 };
 
 export default function ProductReviews({ productId }) {
+  const showcaseOnly = Number(productId) >= 1000;
   const { user, setAuthModal } = useContext(AppCtx);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -43,12 +44,17 @@ export default function ProductReviews({ productId }) {
 
   useEffect(() => {
     if (!productId) return;
+    if (showcaseOnly) {
+      setData({ items: [], total: 0, avg_rating: 0, distribution: {} });
+      setLoading(false);
+      return;
+    }
     setLoading(true);
     getReviews(productId)
       .then(setData)
       .catch(() => setData(null))
       .finally(() => setLoading(false));
-  }, [productId]);
+  }, [productId, showcaseOnly]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -114,7 +120,7 @@ export default function ProductReviews({ productId }) {
       )}
 
       {/* Write Review Button */}
-      {!showForm && (
+      {!showcaseOnly && !showForm && (
         <button
           onClick={() => user ? setShowForm(true) : setAuthModal('login')}
           className="mb-5 px-5 py-2.5 border-2 border-accent text-accent font-semibold rounded-xl text-sm btn-press hover:bg-accent hover:text-white transition-all"
@@ -124,7 +130,7 @@ export default function ProductReviews({ productId }) {
       )}
 
       {/* Review Form */}
-      {showForm && (
+      {!showcaseOnly && showForm && (
         <form onSubmit={handleSubmit} className="dm-card rounded-xl border dm-border p-5 mb-5">
           <h3 className="font-semibold dm-text mb-3">Your Review</h3>
           <StarPicker value={rating} onChange={setRating} />
@@ -166,7 +172,7 @@ export default function ProductReviews({ productId }) {
         <div className="text-center py-10 dm-card rounded-xl border dm-border">
           <p className="text-4xl mb-2">💬</p>
           <p className="font-semibold dm-text">No reviews yet</p>
-          <p className="text-sm dm-text-muted mt-1">Be the first to review this product</p>
+          <p className="text-sm dm-text-muted mt-1">{showcaseOnly ? 'Reviews will be available when this collection launches.' : 'Be the first to review this product'}</p>
         </div>
       ) : (
         <div className="space-y-4">

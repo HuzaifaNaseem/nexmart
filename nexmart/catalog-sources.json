@@ -1,0 +1,248 @@
+{
+  "sample-data": "https://dummyjson.com/docs/products",
+  "product-images": {
+    "product-82.webp": "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/1.webp",
+    "product-79.webp": "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/1.webp",
+    "product-123.webp": "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/1.webp",
+    "product-78.webp": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/1.webp",
+    "product-101.webp": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/1.webp",
+    "product-103.webp": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/1.webp",
+    "product-100.webp": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
+    "product-99.webp": "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/1.webp",
+    "product-160.webp": "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/1.webp",
+    "product-159.webp": "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/1.webp",
+    "product-162.webp": "https://cdn.dummyjson.com/product-images/tops/blue-frock/1.webp",
+    "product-90.webp": "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/1.webp",
+    "product-177.webp": "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/1.webp",
+    "product-174.webp": "https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/1.webp",
+    "product-88.webp": "https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/1.webp",
+    "product-83.webp": "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/1.webp",
+    "product-163.webp": "https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/1.webp",
+    "product-186.webp": "https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/1.webp",
+    "product-190.webp": "https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/1.webp",
+    "product-172.webp": "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/1.webp",
+    "product-12.webp": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/1.webp",
+    "product-11.webp": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/1.webp",
+    "product-43.webp": "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/1.webp",
+    "product-46.webp": "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/1.webp",
+    "product-15.webp": "https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/1.webp",
+    "product-13.webp": "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/1.webp",
+    "product-139.webp": "https://cdn.dummyjson.com/product-images/sports-accessories/baseball-glove/1.webp",
+    "product-14.webp": "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/1.webp",
+    "product-140.webp": "https://cdn.dummyjson.com/product-images/sports-accessories/basketball/1.webp",
+    "product-137.webp": "https://cdn.dummyjson.com/product-images/sports-accessories/american-football/1.webp",
+    "product-47.webp": "https://cdn.dummyjson.com/product-images/home-decoration/table-lamp/1.webp",
+    "product-143.webp": "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-bat/1.webp",
+    "product-151.webp": "https://cdn.dummyjson.com/product-images/sports-accessories/tennis-ball/1.webp",
+    "product-149.webp": "https://cdn.dummyjson.com/product-images/sports-accessories/iron-golf/1.webp",
+    "product-147.webp": "https://cdn.dummyjson.com/product-images/sports-accessories/football/1.webp",
+    "product-153.webp": "https://cdn.dummyjson.com/product-images/sports-accessories/volleyball/1.webp",
+    "product-152.webp": "https://cdn.dummyjson.com/product-images/sports-accessories/tennis-racket/1.webp",
+    "product-4.webp": "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp",
+    "product-1.webp": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp",
+    "product-5.webp": "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/1.webp",
+    "product-8.webp": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/1.webp",
+    "product-2.webp": "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp",
+    "product-6.webp": "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/1.webp",
+    "product-7.webp": "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/1.webp",
+    "product-119.webp": "https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/1.webp",
+    "product-120.webp": "https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/1.webp",
+    "product-48.webp": "https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/1.webp",
+    "product-118.webp": "https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/1.webp",
+    "product-50.webp": "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-whisk/1.webp",
+    "product-56.webp": "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/1.webp",
+    "product-61.webp": "https://cdn.dummyjson.com/product-images/kitchen-accessories/hand-blender/1.webp",
+    "product-66.webp": "https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/1.webp",
+    "product-53.webp": "https://cdn.dummyjson.com/product-images/kitchen-accessories/chopping-board/1.webp",
+    "product-52.webp": "https://cdn.dummyjson.com/product-images/kitchen-accessories/carbon-steel-wok/1.webp",
+    "product-73.webp": "https://cdn.dummyjson.com/product-images/kitchen-accessories/spice-rack/1.webp",
+    "product-54.webp": "https://cdn.dummyjson.com/product-images/kitchen-accessories/citrus-squeezer-yellow/1.webp"
+  },
+  "book-covers": {
+    "Nineteen Eighty-Four": {
+      "cover": "https://covers.openlibrary.org/b/id/9267242-L.jpg?default=false",
+      "work": "/works/OL1168083W"
+    },
+    "The Alchemist": {
+      "cover": "https://covers.openlibrary.org/b/id/11556106-L.jpg?default=false",
+      "work": "/works/OL24793569W"
+    },
+    "The Hobbit": {
+      "cover": "https://covers.openlibrary.org/b/id/14627509-L.jpg?default=false",
+      "work": "/works/OL27482W"
+    },
+    "The Psychology of Money": {
+      "cover": "https://covers.openlibrary.org/b/id/10389354-L.jpg?default=false",
+      "work": "/works/OL21640039W"
+    },
+    "Educated": {
+      "cover": "https://covers.openlibrary.org/b/id/8314077-L.jpg?default=false",
+      "work": "/works/OL18139176W"
+    },
+    "Project Hail Mary": {
+      "cover": "https://covers.openlibrary.org/b/id/11200092-L.jpg?default=false",
+      "work": "/works/OL21745884W"
+    },
+    "The Creative Act": {
+      "cover": "https://covers.openlibrary.org/b/id/13316390-L.jpg?default=false",
+      "work": "/works/OL27955361W"
+    },
+    "Sapiens": {
+      "cover": "https://covers.openlibrary.org/b/id/8634250-L.jpg?default=false",
+      "work": "/works/OL17075811W"
+    },
+    "The Design of Everyday Things": {
+      "cover": "https://covers.openlibrary.org/b/id/7841556-L.jpg?default=false",
+      "work": "/works/OL17570127W"
+    },
+    "Atomic Habits": {
+      "cover": "https://covers.openlibrary.org/b/id/12539702-L.jpg?default=false"
+    },
+    "Dune": {
+      "cover": "https://covers.openlibrary.org/b/id/11481354-L.jpg?default=false"
+    },
+    "Clean Code": {
+      "cover": "https://covers.openlibrary.org/b/id/8065615-L.jpg?default=false"
+    }
+  },
+  "game-art": {
+    "620": "https://cdn.cloudflare.steamstatic.com/steam/apps/620/library_600x900_2x.jpg",
+    "367520": "https://cdn.cloudflare.steamstatic.com/steam/apps/367520/library_600x900_2x.jpg",
+    "413150": "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/library_600x900_2x.jpg",
+    "1145360": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/library_600x900_2x.jpg",
+    "1593500": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/library_600x900_2x.jpg",
+    "1245620": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_600x900_2x.jpg",
+    "105600": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/library_600x900_2x.jpg",
+    "1091500": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900_2x.jpg"
+  },
+  "media-note": "Images and brands belong to their respective owners. Portfolio demo only; obtain rights and verified product data before commercial launch.",
+  "apple-press-images": {
+    "macbook-hero.webp": "https://www.apple.com/ca/newsroom/2023/10/apple-unveils-new-macbook-pro-featuring-m3-chips/",
+    "macbook-m3max.webp": "https://www.apple.com/ca/newsroom/2023/10/apple-unveils-new-macbook-pro-featuring-m3-chips/",
+    "iphone-colors.webp": "https://www.apple.com/newsroom/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/",
+    "iphone-hero.webp": "https://www.apple.com/newsroom/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/",
+    "iphone-camera.webp": "https://www.apple.com/newsroom/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/"
+  },
+  "legacy-product-images": {
+    "20": {
+      "asset": "/catalog/legacy-20.webp",
+      "image": "https://cdn.shopify.com/s/files/1/0434/1661/files/2025_No3_30ml_Product-Packshot_01_GBL_1440x1440_e2fd7e61-e267-4c47-a578-b19deee96f14.jpg?v=1762282862",
+      "page": "https://olaplex.com/products/n-3-hair-perfector-30ml"
+    },
+    "28": {
+      "asset": "/catalog/legacy-28.webp",
+      "image": "https://images.ctfassets.net/hmm5mo4qf4mf/20nCSXYgumyph34VILJp3l/bb0b4791572403a43297348dd4ac0b14/imgbuy_arctis_nova_pro_black_2_v2.png__1920x1080_q100_crop-fit_optimize_subsampling-2-259.jpg?fm=webp&q=90&fit=scale&w=1920",
+      "page": "https://steelseries.com/en-gb/gaming-headsets/arctis-nova-pro?color=black&connectivityType=wired&primaryPlatform=pc"
+    },
+    "4": {
+      "asset": "/catalog/legacy-4.webp",
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/us/qn65s90dafxza/gallery/us-oled-s90d-qn65s90dafxza-550262130?$product-details-jpg$",
+      "page": "https://www.samsung.com/us/tvs/oled-tv/65-class-oled-s90d-sku-qn65s90dafxza/"
+    },
+    "5": {
+      "asset": "/catalog/legacy-5.webp",
+      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/m55is6buar3k4isirw0k/AIR+MAX+90.png",
+      "page": "https://www.nike.com/t/air-max-90-mens-shoes-bAZ6AeHT/CN8490-003"
+    },
+    "9": {
+      "asset": "/catalog/legacy-9.webp",
+      "image": "https://images.hermanmiller.group/asset/c3981846-988e-4b05-9164-5752cbd4f44e/W/AeronChair_100103227_Front.png",
+      "page": "https://www.hermanmiller.com/products/seating/office-chairs/aeron-chairs/"
+    },
+    "10": {
+      "asset": "/catalog/legacy-10.webp",
+      "image": "https://www.ikea.com/us/en/images/products/kallax-shelf-unit-white__0644757_pe702939_s5.jpg",
+      "page": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-80275887/"
+    },
+    "14": {
+      "asset": "/catalog/legacy-14.webp",
+      "image": "https://res.garmin.com/en_GB/products/010-02778-30/v/cf-lg.jpg",
+      "page": "https://www.garmin.com/en-US/p/866230/"
+    },
+    "18": {
+      "asset": "/catalog/legacy-18.webp",
+      "image": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/310731-01.png?$responsive$=",
+      "page": "https://www.dyson.com/hair-care/dyson-airwrap-styler-complete"
+    },
+    "21": {
+      "asset": "/catalog/legacy-21.webp",
+      "image": "https://www.lecreuset.com/dw/image/v2/BDRT_PRD/on/demandware.static/-/Sites-le-creuset-master/default/dwa50578d9/images/cat_crucible_dutch_ovens/Onyx/Onyx_RDO_gallery_3.jpg?sh=1200&sm=fit&sw=1200",
+      "page": "https://www.lecreuset.com/signature-round-dutch-oven-shiny-black-5-5-qt/21177026140071.html"
+    },
+    "22": {
+      "asset": "/catalog/legacy-22.webp",
+      "image": "https://kitchenaidcan.vtexassets.com/arquivos/ids/156646/hero-KSM192XDOB.jpg?v=639129122324470000",
+      "page": "https://www.kitchenaid.ca/en_ca/countertop-appliances/stand-mixers/tilt-head-stand-mixers/p.kitchenaid-5-quart-tilt-head-stand-mixer-with-brushed-stainless-steel-bowl.KSM192XDOB.html"
+    },
+    "23": {
+      "asset": "/catalog/legacy-23.webp",
+      "image": "https://www.vitamix.com/media/catalog/product/a/3/a3500_brushedstainless_build_2500x2500.png",
+      "page": "https://www.vitamix.com/default/shop/a3500"
+    },
+    "24": {
+      "asset": "/catalog/legacy-24.webp",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/f68bb433-17c1-4ddf-8a42-bef9e8913c1a.jpg;maxHeight=1200;maxWidth=1200",
+      "page": "https://www.bestbuy.com/product/nespresso-vertuo-next-premium-coffee-and-espresso-maker-gray/J7G8Z3WK3P"
+    },
+    "25": {
+      "asset": "/catalog/legacy-25.webp",
+      "image": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-controller-image-block-01-ps5-26jun20?$1200px$",
+      "page": "https://www.playstation.com/en-us/accessories/dualsense-wireless-controller/"
+    },
+    "26": {
+      "asset": "/catalog/legacy-26.webp",
+      "image": "https://assets3.razerzone.com/AUWIVDU7eDOhKDVaq96BrtYZLKA=/1500x1000/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fh74%2Fh37%2F9477488148510%2F230216-bw-v4-pro-1500x1000-1.jpg",
+      "page": "https://www.razer.com/gaming-keyboards/razer-blackwidow-v4-pro/RZ03-04681900-R3U1"
+    },
+    "27": {
+      "asset": "/catalog/legacy-27.webp",
+      "image": "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/ncom/en_US/products/hardware/nintendo-switch-oled-model-white-set/115461-switch-oled-white-console-dock-joy-con-grip-1200x675",
+      "page": "https://www.nintendo.com/en-ca/store/products/nintendo-switch-oled-model-white-set/"
+    },
+    "29": {
+      "asset": "/catalog/legacy-29.webp",
+      "image": "https://media.us.lg.com/transform/ecomm-PDPGalleryZoom-1600x1062/3ed53967-a516-4a2c-b4eb-d7d9a353bf3d/md08000330-large01-jpg",
+      "page": "https://www.lg.com/us/monitors/lg-27gp950-b-gaming-monitor"
+    },
+    "30": {
+      "asset": "/catalog/legacy-30.webp",
+      "image": "https://resource.logitech.com/w_1200,h_1200,ar_1,c_pad,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/2025-update/mx-master-3s-bluetooth-edition-top-view-black-new-1.png",
+      "page": "https://www.logitech.com/en-us/shop/p/mx-master-3s"
+    },
+    "3": {
+      "asset": "/catalog/legacy-3.webp",
+      "image": "https://partners.sony.com.my/cdn/shop/files/1_WH-1000XM5_standard_black-Mid_1200x.png?v=1771836387",
+      "page": "https://partners.sony.com.my/products/wh-1000xm5-wireless-noise-cancelling-headphones"
+    },
+    "6": {
+      "asset": "/catalog/legacy-6.webp",
+      "image": "https://lsco.scene7.com/is/image/lsco/005013370-front-pdp?fit=crop,1&fmt=jpeg&hei=1200&op_usm=0.6,0.6,8&qlt=85&resMode=sharp2&wid=1200",
+      "page": "https://www.levi.com/US/en_US/jeans-by-fit-number/men/jeans/501/501-original-fit-mens-jeans/p/005013370"
+    },
+    "7": {
+      "asset": "/catalog/legacy-7.webp",
+      "image": "https://www.patagonia.com.au/cdn/shop/files/25528_STH.png?v=1756550504",
+      "page": "https://www.patagonia.com.au/products/mens-better-sweater-jacket-25528-sth"
+    },
+    "8": {
+      "asset": "/catalog/legacy-8.webp",
+      "image": "https://assets2.targetoptical.com/prod-onecp-record-files/pieyewear/99a292cb-f561-49a4-a4fd-b35d00db94e4/0RB3025__W0879__STD__noshad__fr.png",
+      "page": "https://www.targetoptical.com/to-us/ray-ban/805289601708"
+    },
+    "11": {
+      "asset": "/catalog/legacy-11.webp",
+      "image": "https://casper.com/cdn/shop/files/Original-Foam-Mattress-PDP-hero-grid-1.jpg?v=1757023587&width=1920",
+      "page": "https://casper.com/products/original-foam-v1"
+    },
+    "13": {
+      "asset": "/catalog/legacy-13.webp",
+      "image": "https://yeti.co.jp/cdn/shop/files/Drinkware_BottleChug_36oz_Black_Studio_PrimaryB_13b0c15d-daeb-49be-b3af-6a7a6c83562b.png?v=1765539748",
+      "page": "https://yeti.co.jp/products/rambler-36-bottle-with-chug-cap-black"
+    },
+    "19": {
+      "asset": "/catalog/legacy-19.webp",
+      "image": "https://n.nordstrommedia.com/it/6f904789-06cf-44b7-bafd-7977d92c6b4e.jpeg?crop=pad&h=1170&w=780",
+      "page": "https://www.nordstrom.com/s/creme-de-la-mer-crme-de-la-mer-moisturizing-cream-for-anti-aging-barrier-repair/3057002"
+    }
+  }
+}

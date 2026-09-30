@@ -17,12 +17,12 @@ export default function PCard({product:p,index:idx=0}){
   const openQuickView=(e)=>{e.preventDefault();e.stopPropagation();setQuickView(true)};
   return(
     <>
-    <a href={`#/product/${p.id}`} className="product-card block dm-card rounded-xl overflow-hidden border dm-border anim-fadeInUp opacity-0" style={{animationDelay:`${idx*.06}s`,animationFillMode:'forwards'}}
+    <div className="product-card block dm-card rounded-xl overflow-hidden border dm-border anim-fadeInUp opacity-0" style={{animationDelay:`${idx*.06}s`,animationFillMode:'forwards'}}
       onMouseEnter={()=>p.images?.length>1&&setImgI(1)} onMouseLeave={()=>setImgI(0)}>
       <div className="relative aspect-square overflow-hidden dm-surface">
         {/* contain + shared surface: every product occupies the same footprint
             and nothing is cropped through the middle of the item. */}
-        <img src={p.images?.[imgI]||p.image} alt={p.name} className="card-image w-full h-full object-contain p-4" loading="lazy" decoding="async"/>
+        <a href={`#/product/${p.id}`} aria-label={`View ${p.name}`} className="absolute inset-0 block"><img src={p.images?.[imgI]||p.image} alt={p.name} className="card-image w-full h-full object-contain p-4" loading="lazy" decoding="async"/></a>
         {p.badge&&<span className={`absolute top-2 left-2 px-2.5 py-0.5 text-[10px] font-bold rounded-full text-white ${p.badge==='Best Seller'?'bg-primary':p.badge.includes('New')?'bg-accent2':p.badge==='Hot Deal'||p.badge.includes('Sale')?'bg-red-500':p.badge==='Trending'?'bg-pink-500':p.badge==='Limited'?'bg-amber-500':p.badge==='Top Rated'?'bg-green-600':p.badge==='Iconic'||p.badge==='Premium'?'bg-purple-600':'bg-primary'}`}>{p.badge}</span>}
         {disc>0&&<span className="absolute top-2 right-2 px-2 py-0.5 text-[10px] font-bold bg-red-500 text-white rounded-full">-{disc}%</span>}
         <button onClick={e=>{e.preventDefault();e.stopPropagation();dp({type:'TOG_WISH',id:p.id});dp({type:'NOTIFY',p:{tp:'success',msg:isW?'Removed from wishlist':'♥ Added to wishlist'}})}}
@@ -46,8 +46,8 @@ export default function PCard({product:p,index:idx=0}){
       </div>
       <div className="p-3">
         <p className="text-[10px] dm-text-muted font-medium uppercase tracking-wider">{p.brand}</p>
-        <h3 className="text-sm font-semibold dm-text mt-0.5 line-clamp-2 leading-snug">{p.name}</h3>
-        <div className="mt-1.5"><Stars rating={p.rating} showCount count={p.reviews}/></div>
+        <h3 className="text-sm font-semibold dm-text mt-0.5 line-clamp-2 leading-snug"><a href={`#/product/${p.id}`} className="hover:text-accent">{p.name}</a></h3>
+        <div className="mt-1.5">{p.reviews>0?<Stars rating={p.rating} showCount count={p.reviews}/>:<span className="text-xs dm-text-muted">New to the collection</span>}</div>
         <div className="mt-1.5 flex items-center gap-2">
           <span className="text-base font-bold dm-text">{formatPrice(p.price,currency)}</span>
           {p.originalPrice&&<span className="text-xs dm-text-muted line-through">{formatPrice(p.originalPrice,currency)}</span>}
@@ -57,7 +57,7 @@ export default function PCard({product:p,index:idx=0}){
           ? <p className="mt-1 text-[11px] font-semibold dm-text-muted">Out of stock</p>
           : p.stockCount<10&&<p className="mt-1 text-[11px] font-medium text-accent">Only {p.stockCount} left</p>}
       </div>
-    </a>
+    </div>
     {quickView&&<QuickViewModal product={p} onClose={()=>setQuickView(false)}/>}
     </>
   );

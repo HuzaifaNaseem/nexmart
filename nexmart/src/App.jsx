@@ -12,6 +12,7 @@ import ScrollProgressBar from './components/ui/ScrollProgressBar';
 import InstallBanner from './components/ui/InstallBanner';
 import Router from './Router';
 import CompareBar from './components/CompareBar';
+import StoreIntro from './components/StoreIntro';
 
 function AppShell() {
   const [cartOpen, setCartOpen] = useState(false);
@@ -69,6 +70,7 @@ function AppShell() {
       {/* Scroll progress bar */}
       <ScrollProgressBar progress={scrollProgress} />
 
+      <StoreIntro />
       <div className="min-h-screen dm-bg font-body flex flex-col">
         <Header onCartOpen={() => setCartOpen(true)} />
         <main id="main-content" tabIndex={-1} style={{ outline: 'none' }}

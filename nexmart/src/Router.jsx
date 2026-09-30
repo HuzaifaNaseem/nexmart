@@ -23,8 +23,8 @@ export default function Router(){
   useEffect(()=>{window.scrollTo({top:0,behavior:'smooth'})},[hash]);
   useEffect(()=>{
     const setDesc=(d)=>{let m=document.querySelector('meta[name="description"]');if(!m){m=document.createElement('meta');m.name='description';document.head.appendChild(m);}m.content=d;};
-    if(hash==='#/'||hash===''){document.title='NEXMART — Premium Online Store';setDesc('Shop 10,000+ premium products from 500+ top brands. Free shipping on orders over $50.');}
-    else if(hash.startsWith('#/shop')){document.title='Shop | NEXMART';setDesc('Browse hundreds of products across all categories.');}
+    if(hash==='#/'||hash===''){document.title='NexMart — Good things, all in one place';setDesc('Discover a considered collection across technology, style, home and more.');}
+    else if(hash.startsWith('#/shop')){document.title='Shop | NEXMART';setDesc('Explore products across technology, style, home and more.');}
     else if(hash.startsWith('#/product/')){document.title='Product | NEXMART';}
     else if(hash==='#/cart'){document.title='Your Cart | NEXMART';}
     else if(hash.startsWith('#/checkout')){document.title='Checkout | NEXMART';}
