@@ -7,45 +7,20 @@
   <title>NexMart — Good things, all in one place</title>
   <meta name="description"
     content="Explore a considered collection across technology, style, home and more." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32.png?v=2" />
+  <link rel="shortcut icon" href="/favicon.ico?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-icon.png?v=2" />
+  <link rel="manifest" href="/site.webmanifest?v=2" />
+  <meta name="theme-color" content="#1b654d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
     rel="stylesheet" />
   <script>
-    // PWA Manifest (inline blob — avoids needing a separate manifest.json file)
-    const _manifest = {
-      name: 'NEXMART — Premium Online Store',
-      short_name: 'NEXMART',
-      description: 'Shop premium products at unbeatable prices',
-      start_url: '/',
-      display: 'standalone',
-      background_color: '#0a0a0a',
-      theme_color: '#1b654d',
-      icons: [
-        { src: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23FF4D00' width='100' height='100' rx='20'/><text y='70' x='18' font-size='60' fill='white' font-weight='bold'>N</text></svg>", sizes: '192x192', type: 'image/svg+xml' },
-        { src: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23FF4D00' width='100' height='100' rx='20'/><text y='70' x='18' font-size='60' fill='white' font-weight='bold'>N</text></svg>", sizes: '512x512', type: 'image/svg+xml' }
-      ]
-    };
-    const _mBlob = new Blob([JSON.stringify(_manifest)], { type: 'application/json' });
-    const _mURL = URL.createObjectURL(_mBlob);
-    const _mLink = document.createElement('link');
-    _mLink.rel = 'manifest'; _mLink.href = _mURL;
-    document.head.appendChild(_mLink);
-
-    // Theme color
-    const _tm = document.createElement('meta');
-    _tm.name = 'theme-color'; _tm.content = '#1b654d';
-    document.head.appendChild(_tm);
-
-    // Apple PWA metas
-    const _am1 = document.createElement('meta');
-    _am1.name = 'apple-mobile-web-app-capable'; _am1.content = 'yes';
-    document.head.appendChild(_am1);
-    const _am2 = document.createElement('meta');
-    _am2.name = 'apple-mobile-web-app-status-bar-style'; _am2.content = 'black-translucent';
-    document.head.appendChild(_am2);
-
     // Service Worker (inline blob)
     if ('serviceWorker' in navigator) {
       const swCode = `

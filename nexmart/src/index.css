@@ -776,14 +776,17 @@ html, body, #root { font-family: 'DM Sans', sans-serif; }
 .nm-discovery-card strong { margin-top: 37px; color: var(--text-primary); font-size: 24px; line-height: 1.1; letter-spacing: -.04em; }
 .nm-discovery-card p { margin-top: 12px; color: var(--text-muted); font-size: 13px; line-height: 1.6; }
 .nm-discovery-card b { margin-top: auto; padding-top: 20px; color: var(--text-primary); font-size: 12px; }
-.nm-header-logo { display: inline-flex; align-items: center; gap: 8px; font: 800 22px 'DM Sans', sans-serif; letter-spacing: -.08em; color: var(--text-primary); }
-.nm-header-mark { width: 31px; height: 31px; display: grid; place-items: center; background: #1b654d; color: #fff; font: 700 18px 'Instrument Serif', serif; border-radius: 5px; transform: rotate(-7deg); }
+.nm-brand { --nm-brand-size: 32px; display: inline-flex; align-items: center; gap: calc(var(--nm-brand-size) * .265625); color: var(--text-primary); flex-shrink: 0; vertical-align: middle; }
+.nm-brand-mark { display: block; width: var(--nm-brand-size); height: var(--nm-brand-size); flex: 0 0 auto; }
+.nm-brand-wordmark { display: block; width: calc(var(--nm-brand-size) * 3.785); height: var(--nm-brand-size); flex: 0 0 auto; }
+.nm-brand--inverse, .dark-mode .nm-brand { --nm-logo-tile: #f4f1e6; --nm-logo-ink: #1b654d; --nm-logo-fold: #73aa8b; color: #f4f1e6; }
+.nm-footer .nm-brand { --nm-brand-size: 40px; }
 .nm-promo { background: #18392c; color: #f4f2e7; }
 .nm-promo > div { max-width: 1440px; margin: auto; padding: 8px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 11px; font-weight: 600; letter-spacing: .035em; }
 .nm-promo a { color: #f4f2e7; text-decoration: underline; text-underline-offset: 3px; }
 .nm-footer { background: #142b23; color: #f4f3e9; margin-top: 80px; }
 .nm-footer-grid { max-width: 1440px; margin: auto; padding: 66px clamp(20px, 4.2vw, 70px) 60px; display: grid; grid-template-columns: 2fr 1fr 1fr 1.3fr; gap: 55px; }
-.nm-footer .nm-header-logo { color: #f4f3e9; }
+
 .nm-footer p { margin-top: 19px; max-width: 300px; color: #bbcbbd; font-size: 13px; line-height: 1.7; }
 .nm-footer h3 { font: 700 11px 'DM Sans', sans-serif; letter-spacing: .13em; color: #9dbda5; }
 .nm-footer nav { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
@@ -843,7 +846,8 @@ html, body, #root { font-family: 'DM Sans', sans-serif; }
   .nm-search-mobile-closed { display: none; }
   .nm-search-mobile-open { position: absolute; z-index: 60; top: 70px; left: 0; right: 0; max-width: none; width: 100%; padding: 12px 16px; background: var(--bg); box-shadow: 0 14px 26px rgba(16, 42, 31, .16); }
   .nm-search-mobile-open .search-dropdown { left: 16px; right: 16px; width: auto; }
-  .nm-header-logo { font-size: 20px; }
+  .nm-brand { --nm-brand-size: 28px; }
+  .dm-header .icon-action.hidden { display: none; }
 }
 
 @media (max-width: 639px) {

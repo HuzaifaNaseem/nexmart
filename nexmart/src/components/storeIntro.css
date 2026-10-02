@@ -221,7 +221,7 @@
   transform: translate(-50%, -50%) rotate(9deg);
   animation: nm-mark-arrive .8s 1.05s cubic-bezier(.16, 1, .3, 1) both;
 }
-.nm-intro__monogram span { font-size: 52px; line-height: 1; font-weight: 800; letter-spacing: -.14em; transform: translateX(-3px); }
+.nm-intro__monogram > svg { display: block; width: 100%; height: 100%; border-radius: inherit; }
 
 .nm-intro__copy {
   position: absolute;
@@ -248,8 +248,8 @@
   animation: nm-intro-fade-up .75s 1s both;
 }
 .nm-intro__bottomline p { font-size: clamp(12px, 1.05vw, 15px); line-height: 1.5; color: #d8e3d6; }
-.nm-intro__brand { display: inline-flex; align-items: center; gap: 11px; font-size: 24px; font-weight: 800; letter-spacing: -.06em; }
-.nm-intro__brand-mark { display: grid; place-items: center; width: 31px; height: 31px; font-size: 19px; letter-spacing: -.1em; background: #f4f0df; color: #176046; border-radius: 5px; transform: rotate(-7deg); }
+.nm-intro__brand { display: inline-flex; align-items: center; }
+.nm-intro__brand .nm-brand { --nm-brand-size: 34px; }
 .nm-intro__progress { position: absolute; z-index: 11; bottom: 0; left: 0; width: 100%; height: 3px; background: rgba(244, 240, 223, .1); }
 .nm-intro__progress span { display: block; width: 100%; height: 100%; background: #d2dfae; transform-origin: left; animation: nm-intro-progress 3.3s linear both; }
 
@@ -279,12 +279,11 @@
   .nm-intro__card--right { --x: 30vw; --y: 6px; --z: -25px; }
   .nm-intro__card--front { --x: 0px; --y: -5px; --z: 80px; }
   .nm-intro__monogram { left: calc(50% + 75px); width: 64px; height: 64px; border-radius: 12px; }
-  .nm-intro__monogram span { font-size: 39px; }
   .nm-intro__orbit--outer { width: 84vw; }
   .nm-intro__orbit--inner { width: 64vw; }
   .nm-intro__copy { bottom: 58px; }
   .nm-intro__copy h1 { max-width: 600px; font-size: clamp(50px, 11vw, 80px); }
-  .nm-intro__brand { font-size: 19px; }
+  .nm-intro__brand .nm-brand { --nm-brand-size: 29px; }
   .nm-intro__bottomline p { max-width: 240px; }
 }
 
@@ -298,13 +297,11 @@
   .nm-intro__card { width: 43vw; height: 58vw; }
   .nm-intro__card-caption span:last-child { display: none; }
   .nm-intro__monogram { left: calc(50% + 61px); top: 56%; width: 56px; height: 56px; }
-  .nm-intro__monogram span { font-size: 34px; }
   .nm-intro__copy { bottom: 46px; }
   .nm-intro__copy h1 { font-size: clamp(48px, 12.5vw, 62px); line-height: .94; margin-bottom: 17px; }
   .nm-intro__number { font-size: 8px; }
   .nm-intro__bottomline p { font-size: 11px; max-width: 190px; }
-  .nm-intro__brand { font-size: 17px; gap: 7px; }
-  .nm-intro__brand-mark { width: 26px; height: 26px; font-size: 17px; }
+  .nm-intro__brand .nm-brand { --nm-brand-size: 25px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

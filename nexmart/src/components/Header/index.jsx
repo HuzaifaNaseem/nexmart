@@ -10,6 +10,7 @@ import NotificationCenter from '../NotificationCenter';
 import UserMenu from '../UserMenu';
 import PointsPill from '../PointsPill';
 import MegaMenu from './MegaMenu';
+import BrandLogo from '../BrandLogo';
 
 export default function Header({onCartOpen}){
   const{st,currency,setCurrency,darkMode,setDarkMode}=useStore();
@@ -53,8 +54,7 @@ export default function Header({onCartOpen}){
           <button className="lg:hidden btn-press dm-text -ml-2 p-2 flex items-center justify-center min-w-[44px] min-h-[44px]" onClick={()=>{setMobMenu(!mobMenu);setMobileSearchOpen(false)}}
             aria-label="Open navigation menu"><Ic.Menu/></button>
           <a href="#/" className="flex items-center gap-2 shrink-0" aria-label="NEXMART home">
-            <span className="nm-header-mark">N</span>
-            <span className="nm-header-logo">nexmart</span>
+            <BrandLogo />
           </a>
           <div className={`flex-1 max-w-xl mx-auto relative ${mobileSearchOpen?"nm-search-mobile-open":"nm-search-mobile-closed"}`} ref={searchRef}>
             <div className="relative">

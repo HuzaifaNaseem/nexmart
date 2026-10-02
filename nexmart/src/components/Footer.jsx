@@ -1,9 +1,11 @@
+import BrandLogo from './BrandLogo';
+
 export default function Footer() {
   return (
     <footer className="nm-footer">
       <div className="nm-footer-grid">
         <div>
-          <a href="#/" className="nm-header-logo" aria-label="NexMart home"><span className="nm-header-mark">N</span><span>nexmart</span></a>
+          <a href="#/" aria-label="NexMart home"><BrandLogo className="nm-brand--inverse" /></a>
           <p>Good things, all in one place. Discover a considered collection across technology, style, home and more.</p>
         </div>
         <div><h3>DISCOVER</h3><nav aria-label="Discover"><a href="#/shop">Shop all</a><a href="#/wishlist">Wishlist</a><a href="#/compare">Compare products</a><a href="#/rewards">Rewards</a></nav></div>

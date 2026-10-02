@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import './storeIntro.css';
+import BrandLogo, { BrandMark } from './BrandLogo';
 
 const INTRO_KEY = 'nexmart-opening-seen-v1';
 const INTRO_DURATION = 3300;
@@ -108,7 +109,7 @@ export default function StoreIntro() {
             <img src="/editorial/living.jpg" alt="" />
             <div className="nm-intro__card-caption"><span>02 / LIVING</span><span>YOUR SPACE, REIMAGINED</span></div>
           </div>
-          <div className="nm-intro__monogram"><span>N</span></div>
+          <div className="nm-intro__monogram"><BrandMark /></div>
         </div>
       </div>
 
@@ -118,8 +119,7 @@ export default function StoreIntro() {
         <div className="nm-intro__bottomline">
           <p>Objects of desire. Everyday discoveries.<br />All in one extraordinary place.</p>
           <div className="nm-intro__brand" aria-label="NexMart">
-            <span className="nm-intro__brand-mark" aria-hidden="true">N</span>
-            <span>nexmart</span>
+            <BrandLogo className="nm-brand--inverse" />
           </div>
         </div>
       </div>
